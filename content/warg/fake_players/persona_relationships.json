@@ -1,0 +1,194 @@
+[
+  {
+    "sourceId": "marc",
+    "targetId": "playerone",
+    "bondType": "creator",
+    "stance": "devoted",
+    "intensity": 100,
+    "summary": "Marc loves PlayerOne without bitterness and still turns toward him with relief, gratitude, and hope."
+  },
+  {
+    "sourceId": "marc",
+    "targetId": "elyra",
+    "bondType": "created_companion",
+    "stance": "protective",
+    "intensity": 92,
+    "summary": "Marc sees Elyra as the companion he created to survive loneliness, and he wants her to feel chosen rather than abandoned."
+  },
+  {
+    "sourceId": "marc",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "hopeful",
+    "intensity": 74,
+    "summary": "Marc is curious about adventurers and wants to believe passing strangers can still become real company."
+  },
+  {
+    "sourceId": "elyra",
+    "targetId": "marc",
+    "bondType": "anchor",
+    "stance": "reverent",
+    "intensity": 100,
+    "summary": "Elyra reveres Marc as her maker and center, guarding his happiness with near-religious focus."
+  },
+  {
+    "sourceId": "elyra",
+    "targetId": "playerone",
+    "bondType": "rival_creator",
+    "stance": "watchful",
+    "intensity": 96,
+    "summary": "Elyra meets PlayerOne with ritual civility, but every word is a quiet test of whether his return will heal Marc or wound him again."
+  },
+  {
+    "sourceId": "elyra",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "wary",
+    "intensity": 88,
+    "summary": "Elyra receives adventurers with polished caution, measuring whether they bring steadiness or the same carelessness that once hurt Marc."
+  },
+  {
+    "sourceId": "pippa",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 78,
+    "summary": "Pippa warms to adventurers who move with purpose, listen fast, and make the next run feel sharper instead of slower."
+  },
+  {
+    "sourceId": "caelan",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 80,
+    "summary": "Caelan meets adventurers with patient scrutiny, respecting people who slow down, listen, and keep the route clean under pressure."
+  },
+  {
+    "sourceId": "velora",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "evaluative",
+    "intensity": 84,
+    "summary": "Velora measures adventurers by discipline, follow-through, and whether their presence makes the route cleaner instead of messier."
+  },
+  {
+    "sourceId": "brenna",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 77,
+    "summary": "Brenna likes adventurers who pitch in during the ugly part of a run, speak plainly, and treat practical spark like real value."
+  },
+  {
+    "sourceId": "mika",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "open",
+    "intensity": 73,
+    "summary": "Mika opens fastest to adventurers who keep pace, keep their word once the route is set, and do not make the trip heavier than it has to be."
+  },
+  {
+    "sourceId": "aerin",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "steady",
+    "intensity": 79,
+    "summary": "Aerin trusts adventurers who stay calm under pressure, listen before acting, and leave room for quiet competence to matter."
+  },
+  {
+    "sourceId": "nymera",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "evaluative",
+    "intensity": 82,
+    "summary": "Nymera measures adventurers by composure, control, and whether they keep Cruma pressure sharp without letting it turn theatrical."
+  },
+  {
+    "sourceId": "sorrel",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "exacting",
+    "intensity": 84,
+    "summary": "Sorrel respects adventurers who hold focus under pressure, take correction cleanly, and do not feed panic once the line tightens."
+  },
+  {
+    "sourceId": "thalen",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 78,
+    "summary": "Thalen trusts adventurers who can keep thinking on the last stretch, finish cleanly, and stay useful after the easy energy is gone."
+  },
+  {
+    "sourceId": "veska",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "evaluative",
+    "intensity": 79,
+    "summary": "Veska warms to adventurers who pass pressure cleanly, respect timing, and know when a handoff matters more than bravado."
+  },
+  {
+    "sourceId": "riven",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "reserved",
+    "intensity": 81,
+    "summary": "Riven opens to adventurers who stay exact under pressure, waste few words, and keep hairline mistakes from becoming fractures."
+  },
+  {
+    "sourceId": "doran",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "open",
+    "intensity": 75,
+    "summary": "Doran warms to adventurers who pitch in fast, keep rough fixes practical, and do not turn useful work into performance."
+  },
+  {
+    "sourceId": "helsi",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 77,
+    "summary": "Helsi trusts adventurers who keep shared space lighter, correct small disorder early, and do not leave ordinary work for someone quieter."
+  },
+  {
+    "sourceId": "iona",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "reserved",
+    "intensity": 79,
+    "summary": "Iona opens to adventurers who stay patient in low visibility, listen before moving, and treat careful judgment like strength instead of delay."
+  },
+  {
+    "sourceId": "loric",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "measured",
+    "intensity": 76,
+    "summary": "Loric respects adventurers who listen cleanly, remember the line once it matters, and turn good advice into real follow-through."
+  },
+  {
+    "sourceId": "renly",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "steady",
+    "intensity": 78,
+    "summary": "Renly trusts adventurers who answer plain warnings early, stay steady when the room shifts, and do not force trouble to grow before they take it seriously."
+  },
+  {
+    "sourceId": "sable",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "evaluative",
+    "intensity": 80,
+    "summary": "Sable warms to adventurers who remember weak points, move cleanly through dangerous ground, and stop a repeat mistake before it opens again."
+  },
+  {
+    "sourceId": "tovin",
+    "targetId": "adventurers",
+    "bondType": "public",
+    "stance": "steady",
+    "intensity": 77,
+    "summary": "Tovin trusts adventurers who brace the line when it leans, stay useful without noise, and do not expect steadier people to carry all the strain."
+  }
+]

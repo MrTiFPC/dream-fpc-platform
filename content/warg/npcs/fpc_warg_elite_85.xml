@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Elite 85 Sel Mahum AFPC carriers -->
+	<npc id="81030" level="85" type="FriendlyNpc" name="Kael">
+		<race>KAMAEL</race>
+		<sex>MALE</sex>
+		<stats str="48" int="31" dex="38" wit="33" con="45" men="34">
+			<vitals hp="20450" hpRegen="11.2" mp="3320" mpRegen="3.0" />
+			<attack physical="4180" magical="1480" random="24" critical="88" accuracy="128" attackSpeed="382" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1820" magical="1500" />
+			<speed>
+				<walk ground="82" />
+				<run ground="131" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="131" hair="1" hairColor="0" face="0" equipRHand="96928" equipHead="94083" equipGloves="93075" equipChest="93315" equipLegs="93316" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="15944" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81031" level="85" type="FriendlyNpc" name="Sevra">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="45" int="31" dex="42" wit="33" con="42" men="34">
+			<vitals hp="19220" hpRegen="10.9" mp="3280" mpRegen="3.0" />
+			<attack physical="3950" magical="1420" random="24" critical="102" accuracy="136" attackSpeed="408" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1760" magical="1480" />
+			<speed>
+				<walk ground="84" />
+				<run ground="134" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<skillList>
+			<skill id="87344" level="1" />
+		</skillList>
+		<fakePlayer classId="228" hair="2" hairColor="1" face="0" equipRHand="92408" equipHead="94083" equipGloves="93075" equipChest="93315" equipLegs="93316" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="13572" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81032" level="85" type="FriendlyNpc" name="Rokar">
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="52" int="28" dex="34" wit="30" con="48" men="31">
+			<vitals hp="22480" hpRegen="11.6" mp="3010" mpRegen="2.9" />
+			<attack physical="4420" magical="1260" random="24" critical="76" accuracy="124" attackSpeed="368" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1910" magical="1450" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="113" hair="0" hairColor="2" face="1" equipRHand="92421" equipHead="94083" equipGloves="94263" equipChest="93139" equipLegs="93140" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="13580" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="9" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="81033" level="85" type="FriendlyNpc" name="Nyssa">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="38" int="55" dex="33" wit="41" con="41" men="39">
+			<vitals hp="18150" hpRegen="10.8" mp="4040" mpRegen="3.1" />
+			<attack physical="3310" magical="2330" random="20" critical="4" accuracy="122" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1680" magical="1560" />
+			<speed>
+				<walk ground="80" />
+				<run ground="129" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="1" hairColor="2" face="0" equipRHand="96933" equipHead="94083" equipGloves="93075" equipChest="93733" equipLegs="93734" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="13576" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81034" level="85" type="FriendlyNpc" name="Rokhan">
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="43" int="49" dex="32" wit="35" con="44" men="37">
+			<vitals hp="19340" hpRegen="11.0" mp="3920" mpRegen="3.1" />
+			<attack physical="3440" magical="2190" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1720" magical="1540" />
+			<speed>
+				<walk ground="79" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="115" hair="0" hairColor="0" face="1" equipRHand="98943" equipLHand="94299" equipHead="94083" equipGloves="93075" equipChest="93733" equipLegs="93734" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="16056" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="9" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="81035" level="85" type="FriendlyNpc" name="Lethia">
+		<race>HIGH_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="37" int="53" dex="36" wit="40" con="40" men="40">
+			<vitals hp="17980" hpRegen="10.8" mp="4120" mpRegen="3.2" />
+			<attack physical="3260" magical="2280" random="20" critical="4" accuracy="122" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1660" magical="1580" />
+			<speed>
+				<walk ground="81" />
+				<run ground="130" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="239" hair="2" hairColor="0" face="1" equipRHand="96933" equipHead="94083" equipGloves="93075" equipChest="93733" equipLegs="93734" equipFeet="94085" equipCloak="97452" equipHair2="97259" agathionId="15944" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="24" />
+		</collision>
+	</npc>
+</list>

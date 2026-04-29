@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- AFPC carrier body for Caelan -->
+	<npc id="81004" level="45" type="FriendlyNpc" name="Caelan">
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="0" hairColor="1" face="0" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>

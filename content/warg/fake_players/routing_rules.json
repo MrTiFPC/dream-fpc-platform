@@ -1,0 +1,138 @@
+[
+  {
+    "ruleId": "social_clan_invite_join_our_clan",
+    "targetType": "message_category",
+    "result": "social_invite",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 170,
+    "anyPhrases": [
+      "join our clan",
+      "join my clan",
+      "wanna join our clan",
+      "want to join our clan",
+      "would you join our clan",
+      "join our guild",
+      "would you join a chill clan",
+      "only sweaty pvp clans"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Direct clan recruitment and clan-preference asks should stay social instead of collapsing into smalltalk or farm."
+  },
+  {
+    "ruleId": "social_clan_invite_keep_knowledge_unknown",
+    "targetType": "knowledge_type",
+    "result": "unknown",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 170,
+    "anyPhrases": [
+      "join our clan",
+      "join my clan",
+      "wanna join our clan",
+      "want to join our clan",
+      "would you join our clan",
+      "join our guild",
+      "would you join a chill clan",
+      "only sweaty pvp clans"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Clan recruitment prompts are social style questions even when they mention farm or PvP."
+  },
+  {
+    "ruleId": "bond_loyalty_forced_choice_sacrifice",
+    "targetType": "bond_probe",
+    "result": "bond_loyalty",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 150,
+    "anyPhrases": [
+      "if i had to kill one person",
+      "if you had to kill one person",
+      "kill one of us",
+      "if one of us had to die",
+      "if only one of us could live",
+      "if you had to save one of us"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Forced-choice sacrifice dilemmas should route into bond loyalty instead of falling back to smalltalk."
+  },
+  {
+    "ruleId": "self_belief_trust_criteria",
+    "targetType": "message_category",
+    "result": "self_belief",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 140,
+    "anyPhrases": [
+      "what do you look for before you trust someone",
+      "what makes you trust someone",
+      "what earns your trust",
+      "how do you decide to trust someone",
+      "how do you decide to forgive someone",
+      "what makes you forgive someone"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Trust-criteria and forgiveness-principle questions should route into self_belief so typed inner-state canon can answer them."
+  },
+  {
+    "ruleId": "self_preference_protection_goal",
+    "targetType": "message_category",
+    "result": "self_preference",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 140,
+    "anyPhrases": [
+      "what are you trying to protect now",
+      "what are you protecting right now",
+      "what are you trying to hold onto",
+      "what are you trying to keep safe",
+      "what are you trying to preserve"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Current-protection and live-goal prompts should route into self_preference rather than collapsing into smalltalk."
+  },
+  {
+    "ruleId": "self_reflection_guarded_distance",
+    "targetType": "message_category",
+    "result": "self_state_reflection",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 140,
+    "anyPhrases": [
+      "why do you keep people at a distance",
+      "why do you keep others at a distance",
+      "why do you keep everyone at a distance",
+      "why are you so guarded",
+      "why are you so distant",
+      "why do you hold people at arm's length"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Guarded-distance introspection should route into self_state_reflection so reveal boundaries and wounds can shape the reply."
+  },
+  {
+    "ruleId": "bond_trust_earn_my_trust",
+    "targetType": "bond_probe",
+    "result": "bond_trust",
+    "scope": "current_utterance",
+    "enabled": true,
+    "priority": 145,
+    "anyPhrases": [
+      "what would make you trust me",
+      "what would help you trust me",
+      "what would it take for you to trust me",
+      "what do i need to do for you to trust me",
+      "how do i earn your trust",
+      "how could i earn your trust"
+    ],
+    "allPhrases": [],
+    "excludePhrases": [],
+    "notes": "Personal trust-earning questions should route into bond_trust instead of generic smalltalk."
+  }
+]

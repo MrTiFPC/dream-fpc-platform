@@ -1,0 +1,121 @@
+[
+  {
+    "templateId": "generic_player_like",
+    "category": "generic_fpc",
+    "fpcTag": "fpc",
+    "presentationMode": "player_like",
+    "carrierPolicy": "fixed",
+    "enabled": true,
+    "talkable": true,
+    "channels": {
+      "whisper": true,
+      "general": true,
+      "shout": true,
+      "world": true
+    },
+    "adventurerProfile": {
+      "tier": "social",
+      "carrierMode": "npc_backed",
+      "inventoryMode": "none",
+      "pickupPolicy": "disabled",
+      "combatMode": "none",
+      "partyMode": "none",
+      "clanMode": "hybrid_overlay",
+      "matchmakingMode": "none",
+      "progressionMode": "fixed",
+      "fixedLevel": 0,
+      "loadoutProfile": "",
+      "consumableProfile": ""
+    }
+  },
+  {
+    "templateId": "generic_story_npc",
+    "enabled": true,
+    "category": "generic_fpc",
+    "channels": {
+      "whisper": true,
+      "general": true,
+      "shout": true,
+      "world": true
+    },
+    "talkable": true,
+    "fpcTag": "fpc",
+    "presentationMode": "story_npc_like",
+    "carrierPolicy": "fixed",
+    "adventurerProfile": {
+      "tier": "social",
+      "carrierMode": "npc_backed",
+      "inventoryMode": "none",
+      "pickupPolicy": "disabled",
+      "combatMode": "none",
+      "partyMode": "none",
+      "clanMode": "hybrid_overlay",
+      "matchmakingMode": "none",
+      "progressionMode": "fixed",
+      "fixedLevel": 0,
+      "loadoutProfile": "",
+      "consumableProfile": ""
+    }
+  },
+  {
+    "templateId": "generic_adventurer_npc_backed",
+    "enabled": true,
+    "category": "generic_fpc",
+    "channels": {
+      "whisper": true,
+      "general": true,
+      "shout": true,
+      "world": true
+    },
+    "talkable": true,
+    "fpcTag": "fpc",
+    "presentationMode": "player_like",
+    "carrierPolicy": "fixed",
+    "adventurerProfile": {
+      "tier": "adventurer",
+      "carrierMode": "npc_backed",
+      "inventoryMode": "synthetic",
+      "pickupPolicy": "disabled",
+      "combatMode": "synthetic",
+      "partyMode": "fpc_coordination",
+      "clanMode": "hybrid_overlay",
+      "matchmakingMode": "none",
+      "progressionMode": "staged",
+      "stageBandId": "starter_40_52",
+      "fixedLevel": 0,
+      "loadoutProfile": "adventurer_starter",
+      "consumableProfile": "adventurer_light"
+    }
+  },
+  {
+    "templateId": "85High",
+    "enabled": true,
+    "category": "generic_fpc",
+    "channels": {
+      "whisper": true,
+      "general": true,
+      "shout": true,
+      "world": true
+    },
+    "talkable": true,
+    "fpcTag": "fpc",
+    "presentationMode": "player_like",
+    "carrierPolicy": "fixed",
+    "familyTag": "afpc_85high",
+    "adventurerProfile": {
+      "tier": "adventurer",
+      "carrierMode": "npc_backed",
+      "inventoryMode": "synthetic",
+      "pickupPolicy": "disabled",
+      "combatMode": "synthetic",
+      "partyMode": "fpc_coordination",
+      "clanMode": "hybrid_overlay",
+      "matchmakingMode": "none",
+      "progressionMode": "fixed",
+      "fixedLevel": 85,
+      "loadoutProfile": "",
+      "consumableProfile": "adventurer_standard",
+      "routeId": ""
+    }
+  }
+]

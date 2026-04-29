@@ -1,0 +1,28 @@
+[
+  {
+    "id": "q10002_fighting_skill_gremlin_trial",
+    "displayName": "Q10002 Fighting Skill Synthetic Trial",
+    "enabled": true,
+    "sourceQuestId": 10002,
+    "sourceQuestName": "Fighting Skill",
+    "assignedFpcIds": [
+      "helsi"
+    ],
+    "stagingZoneId": "talking_island_roien",
+    "objectiveZoneId": "talking_island_gremlin_yard",
+    "returnZoneId": "talking_island_roien",
+    "targetNpcIds": [
+      18342,
+      20001
+    ],
+    "targetCount": 1,
+    "searchRadius": 900,
+    "leashRadius": 1200,
+    "returnRadius": 350,
+    "repeatable": false,
+    "startLine": "Roien's basic drill: one gremlin, clean and quick.",
+    "progressLine": "Gremlin drill progress",
+    "completeLine": "Fighting Skill drill complete. No real quest items claimed.",
+    "notes": "Synthetic mirror of Q10002_FightingSkill: accept -> kill one Gremlin -> return. AFPC state is synthetic and does not touch real QuestState, inventory, rewards, or quest chains."
+  }
+]

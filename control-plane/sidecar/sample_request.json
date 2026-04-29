@@ -1,0 +1,20 @@
+{
+  "fakePlayerId": "bot-01",
+  "archetype": "fighter",
+  "currentZone": "abandoned_camp",
+  "state": "idle",
+  "hpBand": "high",
+  "mpBand": "high",
+  "nearbyPlayerCount": 4,
+  "recentEvent": "idle_timeout",
+  "chatCooldownReady": true,
+  "teleportCooldownReady": false,
+  "allowedIntents": ["idle", "move", "farm", "recover", "speak", "regroup"],
+  "allowedZones": ["abandoned_camp", "cruma_marshlands"],
+  "availableLineStyleTags": ["none", "casual_short", "boast_short", "dry_short", "warning_short", "friendly_short"],
+  "availableTopicTags": ["none", "grind", "loot", "zone", "danger", "brag", "smalltalk"],
+  "lastLineTag": "none",
+  "boredomScore": 0.88,
+  "model": "qwen3-14b-local",
+  "temperature": 0.1
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "starter_40_52",
+    "displayName": "Starter 40-52",
+    "minLevel": 40,
+    "maxLevel": 52,
+    "representativeLevel": 46,
+    "loadoutProfile": "adventurer_starter",
+    "consumableProfile": "adventurer_light",
+    "combatProfile": "starter_melee",
+    "notes": "Early Essence adventurer band for synthetic low-risk roaming and first party behavior."
+  },
+  {
+    "id": "journey_53_75",
+    "displayName": "Journey 53-75",
+    "minLevel": 53,
+    "maxLevel": 75,
+    "representativeLevel": 66,
+    "loadoutProfile": "adventurer_journey",
+    "consumableProfile": "adventurer_standard",
+    "combatProfile": "journey_skirmish",
+    "notes": "Mid-path band for stronger solo loops and lightweight party coordination."
+  },
+  {
+    "id": "veteran_76_84",
+    "displayName": "Veteran 76-84",
+    "minLevel": 76,
+    "maxLevel": 84,
+    "representativeLevel": 80,
+    "loadoutProfile": "adventurer_veteran",
+    "consumableProfile": "adventurer_sustained",
+    "combatProfile": "veteran_frontline",
+    "notes": "Post-awakening veteran band for more stable combat identity."
+  },
+  {
+    "id": "late_85_98",
+    "displayName": "Late 85-98",
+    "minLevel": 85,
+    "maxLevel": 98,
+    "representativeLevel": 92,
+    "loadoutProfile": "adventurer_late",
+    "consumableProfile": "adventurer_focused",
+    "combatProfile": "late_rotations",
+    "notes": "Late-game pre-heroic band for strong synthetic adventurer routing without endgame claims."
+  },
+  {
+    "id": "heroic_99_100",
+    "displayName": "Heroic 99-100",
+    "minLevel": 99,
+    "maxLevel": 100,
+    "representativeLevel": 99,
+    "loadoutProfile": "adventurer_heroic",
+    "consumableProfile": "adventurer_heroic",
+    "combatProfile": "heroic_anchor",
+    "notes": "Highest staged band reserved for carefully authored late-game adventurer FPCs."
+  }
+]

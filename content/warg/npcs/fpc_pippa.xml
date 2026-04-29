@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- AFPC carrier body for Pippa -->
+	<npc id="81003" level="45" type="FriendlyNpc" name="Pippa">
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="1" hairColor="2" face="1" equipRHand="232" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+</list>

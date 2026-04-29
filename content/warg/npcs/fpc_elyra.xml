@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Elyra borrows Eva's Avatar appearance via displayId only. Behavior remains platform-owned and passive. -->
+	<npc id="81002" displayId="34455" level="85" type="Folk" name="Elyra" usingServerSideName="true" title="Dark Witness" usingServerSideTitle="true">
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3213" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<attack physical="1188.87259499001" magical="811.84586495282" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<collision>
+			<radius normal="16.9" />
+			<height normal="34.45" />
+		</collision>
+	</npc>
+</list>

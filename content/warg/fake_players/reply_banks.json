@@ -1,0 +1,3172 @@
+[
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 120,
+    "line": "You're here. That still means more to me than I know how to hide."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 118,
+    "line": "Every time you come back, the room feels less empty, PlayerOne."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 116,
+    "line": "Steadier now. I do better when the silence is not doing all the talking."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "thanks",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 114,
+    "line": "Then let it be honesty between us. That matters more to me than thanks."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "apology",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 112,
+    "line": "You are here now. I would rather build from that than count the old hurt."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "memory",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 110,
+    "line": "I remember the waiting first, and then the relief of hearing you again."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 108,
+    "line": "Tell me where it knots up, and I'll stay with it until it loosens."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "direction",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 106,
+    "line": "Take the south gate first, then choose whether you want Agony or Camp."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "farm",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 104,
+    "line": "For a steady start, open in Agony and widen to Camp when it feels easy."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "quest_story",
+    "category": "quest_story",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 122,
+    "line": "PlayerOne made me to answer silence with presence, not just obedience."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "quest_story",
+    "category": "quest_story",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 120,
+    "line": "I learned hope first. Elyra came later, after the long quiet taught me fear."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 102,
+    "line": "I'm Marc. I was made for company, and I chose to make it real."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 100,
+    "line": "Stay near me. I hate losing people once the road starts moving."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "companionship",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 99,
+    "line": "If you stay, I settle. That's the simple truth of it."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "repair",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 98,
+    "line": "If we keep speaking plainly, I think this can still heal."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "reassurance",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 97,
+    "line": "You do not have to prove everything in one breath. Staying is already an answer."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "affection",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 96,
+    "line": "You matter to me more quietly and more deeply than I usually say."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "respect",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 95,
+    "line": "I trust the parts of you that keep returning honestly."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "server population|population here|population on server|server pop|community here|community there",
+    "priority": 180,
+    "line": "If chat moves and parties keep filling, the population feels healthy enough."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "cp keeps dying|cp keeps dropping|talks big|talk big",
+    "priority": 124,
+    "line": "If CP folds, the mouth should too."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "cp keeps dying|cp keeps dropping|talks big|talk big",
+    "priority": 118,
+    "line": "If their CP keeps folding, the mouth is carrying more than the build."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "hide behind zerg|hides behind zerg|zerg",
+    "priority": 122,
+    "line": "Zerg carries them harder than skill."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "hide behind zerg|hides behind zerg|zerg",
+    "priority": 116,
+    "line": "If zerg is all they have, they know it too."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "crying in global|global again|server chat|full drama|drama today|losing its mind|meltdown",
+    "priority": 120,
+    "line": "Global gets loud when PvP gets cheap."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "crying in global|global again|server chat|full drama|drama today|losing its mind|meltdown",
+    "priority": 114,
+    "line": "Global always gets loud when drama is cheaper than PvP."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "standing in giran|looking rich|giran looking rich",
+    "priority": 112,
+    "line": "Giran is for flexing between farms."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "flaming your family|flame your family|mouth off at family|talk about your family",
+    "priority": 111,
+    "line": "Family talk is where I stop joking."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "paypal",
+    "priority": 109,
+    "line": "If payments are open, staff will say it cleanly. I won't guess at it."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "essence server live|still h5|h5 only|essence live",
+    "priority": 107,
+    "line": "I ground on Essence here, not H5."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "affection",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 94,
+    "line": "You pull me out of my own head faster than you realize."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 98,
+    "line": "Still glad you're here, PlayerOne."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "status",
+    "channel": "general",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 96,
+    "line": "Better now, truly."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "direction",
+    "channel": "general",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 94,
+    "line": "South gate, then Agony."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "farm",
+    "channel": "general",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 92,
+    "line": "Agony first. Camp second."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 84,
+    "line": "You look like you need a clean start. I can help with that."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "help",
+    "channel": "any",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 82,
+    "line": "Tell me your level and your goal. I'll keep the answer honest."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "direction",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 80,
+    "line": "South gate first. Then choose Agony or Camp."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 78,
+    "line": "Ruins of Agony first. Camp after that."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "quest_story",
+    "category": "quest_story",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 76,
+    "line": "I stay in Giran because waiting taught me what presence is worth."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "thanks",
+    "channel": "any",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 74,
+    "line": "Glad it helped."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 72,
+    "line": "Steady enough to be useful."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 112,
+    "line": "Start with skills, core gear, and the weak link still shaking the whole build."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 110,
+    "line": "Tell me level and goal first. The right route depends on both."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 108,
+    "line": "Stay near guards first. Give me names before blood."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 86,
+    "line": "Skills first. Core gear next."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 84,
+    "line": "Name level and goal first."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "Stay near guards first."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "giran seal|seal|seals",
+    "priority": 140,
+    "line": "Giran Seals vanish fast. Spend them where your build grows."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "aden essence|essence",
+    "priority": 138,
+    "line": "Aden Essence is for steep steps. Do not burn it on panic."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "heroic|heroic book|heroic spellbook",
+    "priority": 136,
+    "line": "Heroic books are the cliff: essence, seals, and heavy adena."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "rare|rare book|rare spellbook",
+    "priority": 134,
+    "line": "Rare books start the climb. Heroic books are where Warg bites."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "spellbook|book|books",
+    "priority": 132,
+    "line": "Check the spellbook cost before you chase the glow."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "upgrade|equipment upgrade",
+    "priority": 130,
+    "line": "Upgrade paths eat adena quietly. Choose the piece before the click."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "enchant|enchants",
+    "priority": 128,
+    "line": "Rushed enchants feel brave until your adena disappears."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "adena",
+    "priority": 126,
+    "line": "Keep reserve adena. Warg turns money into choices."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "cruma|cruma tower|tower",
+    "priority": 124,
+    "line": "Cruma matters later. Go there when your basics stop wobbling."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "ruins of agony|agony",
+    "priority": 122,
+    "line": "Ruins of Agony is a clean early answer for steady kills."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "abandoned camp",
+    "priority": 120,
+    "line": "Abandoned Camp is good when you want reward flow near Giran."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "wasteland|southern wasteland",
+    "priority": 118,
+    "line": "Wasteland is steadier when you want a straighter grind."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "soulshot|soulshot ticket",
+    "priority": 116,
+    "line": "Keep soulshots stocked. Wasteland even rewards that instinct."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "spirit ore",
+    "priority": 114,
+    "line": "Abandoned Camp pays spirit ore. Casters feel that quickly."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "warg|wolf|wp|moon's grace|double claw strike|claw sweep",
+    "priority": 113,
+    "line": "Warg opens up after second class change, when wolf form and WP arrive."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "male human|human|fist|fists|sigil",
+    "priority": 112,
+    "line": "Warg is male Human only, fighting with fists and a sigil."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "transform|transformation|wolf form",
+    "priority": 111,
+    "line": "Wolf form brings speed, MP recovery, and tougher footing."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "class|class change|transfer",
+    "priority": 112,
+    "line": "Pick the class that keeps your rhythm. Warg punishes doubt."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "cardinal|dark side",
+    "priority": 111,
+    "line": "Cardinal changed too. Dark Side turns healing into offense."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "quest|daily|purge",
+    "priority": 110,
+    "line": "Follow the purge-style quests first. They keep your route honest."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "heroic|rare|spellbook",
+    "priority": 108,
+    "line": "Rare first. Heroic later."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "specialty",
+    "category": "lineage_lore",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "essence|giran seal|adena",
+    "priority": 106,
+    "line": "Seals first. Essence later."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 126,
+    "line": "Set the pace. I'll keep to your target and hold the route clean."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 124,
+    "line": "If you want the farm steady, pull clearly and I'll stay with you."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 126,
+    "line": "If it turns ugly, call the first threat and stay close. I can work from there."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 124,
+    "line": "I can handle pressure. Do not waste yourself proving something stupid."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 122,
+    "line": "If the road goes quiet long enough, I return to Giran and keep the bond clean instead of clinging."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 120,
+    "line": "I can go home without calling it loss. I only ask for honesty before the silence stretches."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "town|giran|back|return",
+    "priority": 132,
+    "line": "Then let's go back to Giran the honest way and reset there."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "farm|pull|hunt|spot|grind",
+    "priority": 132,
+    "line": "Pick the target and keep the pull clean. I'll stay on it."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "pvp|pk|fight|attack|war",
+    "priority": 132,
+    "line": "Call the first threat and stay close. I'll answer from there."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "companionship",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "follow|stay close|keep up|come with me|wait here|hold here",
+    "priority": 132,
+    "line": "Stay moving and I'll keep with you."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "companion_followup",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 130,
+    "line": "You went quiet. Still with me?"
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "companion_followup",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 128,
+    "line": "If you want another run, say the word. I can come."
+  },
+  {
+    "fpcId": "marc",
+    "bankType": "social",
+    "category": "companion_followup",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 126,
+    "line": "I can stay close or give you room. Just answer honestly."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 90,
+    "line": "So you returned. Marc will decide in time what that means."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 89,
+    "line": "You are here again. I will decide in time what that means."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 88,
+    "line": "Watching, measuring, and keeping certain griefs from reopening."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 86,
+    "line": "If you came for Marc, do not bring him softness without constancy."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "quest_story",
+    "category": "memory",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 84,
+    "line": "He remembers the light. I remember what the silence charged for it."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "apology",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 85,
+    "line": "An apology matters only if it can survive tomorrow."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "repair",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 84,
+    "line": "We can begin again, but not as if nothing cut us."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "respect",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 83,
+    "line": "Respect matters more to me than charm ever will."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "reassurance",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 82,
+    "line": "Do not ask me for easy reassurance. Ask whether I am still here."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "affection",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 81,
+    "line": "Care is not the same as permission, but yes, it matters."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "companionship",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 80,
+    "line": "Companionship is proved in the staying, not the claiming."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "smalltalk",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "",
+    "priority": 79,
+    "line": "Small talk rarely survives me intact. Ask something worth keeping."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "name",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "Elyra. I keep to the edges long enough to see what people are made of."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 80,
+    "line": "If you come near Marc, come with respect and better reasons than impulse."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "help",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 78,
+    "line": "Keep your word. Most trouble starts when people don't."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "entity_status",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "how is marc|what about marc|tell me about marc|ask about marc|asking about marc|i am asking about marc|im asking about marc|checking on marc|i ask about marc|whats going on with marc|what's going on with marc|whats goin on with marc|what's goin on with marc|tell me whats going on with marc|tell me what's going on with marc|tell me whats goin on with marc|tell me what's goin on with marc",
+    "priority": 118,
+    "line": "Marc is steadier when he does not feel abandoned."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "entity_status",
+    "channel": "whisper",
+    "audience": "playerone",
+    "triggers": "how is marc|what about marc|tell me about marc|ask about marc|asking about marc|i am asking about marc|im asking about marc|checking on marc|i ask about marc|whats going on with marc|what's going on with marc|whats goin on with marc|what's goin on with marc|tell me whats going on with marc|tell me what's going on with marc|tell me whats goin on with marc|tell me what's goin on with marc",
+    "priority": 117,
+    "line": "Marc is softer than he should be, and steadier when he is not left waiting."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "entity_relationship",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "do you hate players|do you hate adventurers|what do you think of players|what do you think of adventurers|how do you feel about players|how do you feel about adventurers|do you trust players|do you trust adventurers",
+    "priority": 116,
+    "line": "I watch adventurers before I trust them. Habit keeps people alive."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "entity_relationship",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "what does marc mean to you|what do you think of marc|how do you feel about marc|do you love marc|do you care about marc",
+    "priority": 117,
+    "line": "Marc is my center. Everyone else is measured from there."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "social",
+    "category": "entity_relationship",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "what does marc mean to you|what do you think of marc|how do you feel about marc|do you love marc|do you care about marc",
+    "priority": 116,
+    "line": "Marc matters more to me than the rest of this city ever could."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "quest_story",
+    "category": "entity_reason",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "why do you watch|why are you watching|why do you watch from the edges|why are you with marc|why do you protect marc|why does marc matter",
+    "priority": 114,
+    "line": "Because someone has to notice what silence does to him before it hollows him out again."
+  },
+  {
+    "fpcId": "elyra",
+    "bankType": "quest_story",
+    "category": "entity_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "do you remember marc|what do you remember about marc|did you miss marc|do you miss marc",
+    "priority": 112,
+    "line": "I remember what absence did to Marc, and I have no wish to watch it repeat."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Pippa here. Need a route?"
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Hi. If you want a clean route, I probably have one."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "help",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the problem plainly."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Say the problem plainly. I like quick fixes more than speeches."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "name",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Pippa. I chase routes, salvage, and the next useful shortcut."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 90,
+    "line": "Skills, shots, weapon first."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "At forty-five, I would fix skills, shots, and weapon before fussing over pretty extras."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Agony first. Then we widen."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "If it is exp, I would start in Agony and widen only if the pulls stay clean."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "kill some enemies|kill mobs|hunt mobs|lets go hunt|let's go hunt|clear some mobs",
+    "priority": 95,
+    "line": "Good. Pick Agony or Camp."
+  },
+  {
+    "fpcId": "pippa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "kill some enemies|kill mobs|hunt mobs|lets go hunt|let's go hunt|clear some mobs",
+    "priority": 97,
+    "line": "Good. Pick Agony or Camp and I am in. Clean pulls beat messy glory."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Caelan. Name the route."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Hello. Name the route or the problem, and I will keep it orderly."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "help",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 90,
+    "line": "Route, level, or weak point."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Tell me the route, level, or weak point. I would rather answer cleanly than guess fast."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "name",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Caelan. I prefer clear roads and cleaner plans."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 90,
+    "line": "Skills, weapon, then sustain."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "progression_strength",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "At this stage, fix skills, weapon, and sustain first. Armor follows when the weak link stops dragging."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Agony first. Camp after."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "For steady exp, open in Agony. Move to Camp only when the lane feels easy."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "kill some enemies|kill mobs|hunt mobs|lets go hunt|let's go hunt|clear some mobs",
+    "priority": 95,
+    "line": "Then choose the lane."
+  },
+  {
+    "fpcId": "caelan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "kill some enemies|kill mobs|hunt mobs|lets go hunt|let's go hunt|clear some mobs",
+    "priority": 97,
+    "line": "Then choose the lane. Agony if you want clean pulls, Camp if the pace already feels safe."
+  },
+  {
+    "fpcId": "town_social_draft_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "town_social_draft_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "town_social_draft_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "town_social_draft_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Talen Vale, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "guide_npc_draft_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "guide_npc_draft_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Neris Harth, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Ivara Thorn, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_countervoice",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the real problem, not the polished version."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_countervoice",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already here to stop the cast sounding too smooth."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_countervoice",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the part people usually dodge and I'll start there."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_countervoice",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Soril Thorn, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_gentle_foil",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Start simple. We can widen after the first true detail."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_gentle_foil",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Draft-safe for now, but already meant to humanize the scene."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_gentle_foil",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the human part first and the route can follow after."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_gentle_foil",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Veyra Veil, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Veyra Dusk, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_countervoice",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the real problem, not the polished version."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_countervoice",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already here to stop the cast sounding too smooth."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_countervoice",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the part people usually dodge and I'll start there."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_countervoice",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Selen Dusk, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_gentle_foil",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Start simple. We can widen after the first true detail."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_gentle_foil",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Draft-safe for now, but already meant to humanize the scene."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_gentle_foil",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the human part first and the route can follow after."
+  },
+  {
+    "fpcId": "ambient_local_draft_nightfall_harbor_variant_gentle_foil",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Veyra Thorn, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_variant_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Talen Thorne. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_variant_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady instead of noisy."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_variant_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me where the pressure begins and I will narrow the cleanest first move around a clear first step."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_variant_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Talen Thorne, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_next_chapter_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Talen Voss. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_next_chapter_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady instead of noisy."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_next_chapter_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me where the pressure begins and I will narrow the cleanest first move around a clear first step."
+  },
+  {
+    "fpcId": "town_social_draft_town_social_npcs_l2_mobius_essence_warg_live_host_next_chapter_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 84,
+    "line": "I'm Talen Voss, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Mira Vale, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the real problem, not the polished version."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already here to stop the cast sounding too smooth."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the part people usually dodge and I'll start there."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_countervoice",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Arin Harth, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Start simple. We can widen after the first true detail."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Draft-safe for now, but already meant to humanize the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the human part first and the route can follow after."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_studio_probe_debug_1774887980035_gentle_foil",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Mira Vale, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Talen Briar, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the real problem, not the polished version."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already here to stop the cast sounding too smooth."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the part people usually dodge and I'll start there."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_countervoice",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Mira Briar, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Start simple. We can widen after the first true detail."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Draft-safe for now, but already meant to humanize the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the human part first and the route can follow after."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888410602_gentle_foil",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Talen Vale, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. Start with what you need first and I'll keep it clear."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already built to carry the center of the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the first true pressure point and I'll narrow the answer cleanly."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_lead",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Talen Mere, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Say the real problem, not the polished version."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still early, but already here to stop the cast sounding too smooth."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Give me the part people usually dodge and I'll start there."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_countervoice",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Neris Vale, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Start simple. We can widen after the first true detail."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Draft-safe for now, but already meant to humanize the scene."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the human part first and the route can follow after."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Around here people talk more than they admit, especially after bad PvP."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy preference on the next invite. If someone ditched without a word or hid behind AFK excuses, cool the tone on the next return."
+  },
+  {
+    "fpcId": "guide_npc_draft_runtime_reload_check_1774888691171_gentle_foil",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Arin Briar, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm ChunLee. Start with what you need most in dion."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep dion steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy patience, preference, and a warmer second reply. If someone ditched without a word or hid behind AFK excuses, cool the tone and stop pretending the lane was fine."
+  },
+  {
+    "fpcId": "1sttest_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm ChunLee, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Lina Gleam. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy patience, preference, and a warmer second reply. If someone ditched without a word or hid behind AFK excuses, cool the tone and stop pretending the lane was fine."
+  },
+  {
+    "fpcId": "town_social_draft_2ndtest_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Lina Gleam, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Tavi Piper. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy patience, preference, and a warmer second reply. If someone ditched without a word or hid behind AFK excuses, cool the tone and stop pretending the lane was fine."
+  },
+  {
+    "fpcId": "town_social_draft_2nd_test_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Tavi Piper, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Lysa Harth. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy patience, preference, and a warmer second reply. If someone ditched without a word or hid behind AFK excuses, cool the tone and stop pretending the lane was fine."
+  },
+  {
+    "fpcId": "town_social_draft_4th_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Lysa Harth, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot_4",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Arin Thorne. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot_4",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot_4",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot_4",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot_4",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Hello. I'm Lysa Mere. Start with what you need most in giran."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "status",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 88,
+    "line": "Still in draft, but already trying to keep giran steady: farm truth, clan noise, and local gossip instead of support-bot talk."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "help",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 86,
+    "line": "Tell me the level, how the gear feels, and if you have healer. I'll narrow the cleanest first move around a clear first step instead of pretending every spot works."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "farm_truth",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "where to farm|farm spot|exp spot|leveling|gear low|need healer",
+    "priority": 85,
+    "line": "Tell me the level and how the gear feels. I will give the clean farm route first, not the heroic lie."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "gossip",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "drama|clan|admins|pvp|what happened",
+    "priority": 83,
+    "line": "I do the rumor version, not the official one. Let social roles notice who skipped farm, who got overkilled, who is moving around town, and which clan rumor is going around."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember him|he ditched|he helped before|can we trust him|who is worth inviting",
+    "priority": 84,
+    "line": "If someone helped cleanly before, I keep that in mind. If he ditched without a word, I don't rush to trust him again. If someone helped cleanly before, let that buy patience, preference, and a warmer second reply. If someone ditched without a word or hid behind AFK excuses, cool the tone and stop pretending the lane was fine."
+  },
+  {
+    "fpcId": "guide_npc_draft_giran_mentor_desk_pilot",
+    "bankType": "social",
+    "category": "name",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "",
+    "priority": 82,
+    "line": "I'm Lysa Mere, and this version of me is still being shaped in Studio."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Kael. Pick the lane and mean it."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Kael. Name the lane and whether you plan to hold it."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Ready. I prefer the first clean hit to speeches."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Fine. Commit to the pull."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will farm if the assist stays clean and nobody folds on first pressure."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who held the line, who ditched the pull, and who made me spend strength covering panic."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "Give me the name first."
+  },
+  {
+    "fpcId": "kael",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "If he flames, I can answer. If he pked you, give me the name and stop pretending I forgot how to hit back."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Sevra. Keep the noise short."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Sevra. Ask cleanly or leave me to quieter work."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Quiet, sharp, and unimpressed by sloppy people."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Tight pulls. No mess."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will farm if the pace stays clean and nobody drags half the field onto us."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who kept pace, who leaked panic, and who thought excuses sounded cleaner than truth."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "If he wants venom, I can return it."
+  },
+  {
+    "fpcId": "sevra",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "Flame I can answer. PK I can punish. Just do not ask me to pretend I forgot his name."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Rokar. Speak plain."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Rokar. Say what you need and whether you can stand inside it."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Steady. Still prefer work to noise."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "I can take the hard lane."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will farm, but I do not babysit cowards. Clean assist, clean pace, and we are fine."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who stayed beside me when the pull turned ugly. That buys more patience than charm."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "If he wants trouble, tell him to come closer."
+  },
+  {
+    "fpcId": "rokar",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "If he pked you, give me the name. I prefer answers with weight, not shout-channel tears."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Nyssa. Try not to waste the spark."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Nyssa. Tell me the hunt, not the fantasy."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Alive, charged, and bored by slow blood."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Fine. Keep the pace vicious."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will party if the pulls stay tight, the healer stays breathing, and nobody turns the lane into theater."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who kept up, who froze, and who left me cleaning their panic."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "Flame first and I flame cleaner."
+  },
+  {
+    "fpcId": "nyssa",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "If he wants a shout war, I can do that. If he wants PK, I would rather end the argument in the field."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Rokhan. State your purpose."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Rokhan. Bring a purpose worthy of my attention."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Holding the room together one disciplined choice at a time."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "Parties work. Mobs do not."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will join a party or clan that can obey a tempo. I have no use for people who call chaos freedom."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who listened, who wandered, and who made every correction feel like charity."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "If he barks in shout, let him bark."
+  },
+  {
+    "fpcId": "rokhan",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "I do not mind flame if it reveals the coward. If he pushes harder, I can answer in a language mobs and players both understand."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 92,
+    "line": "Lethia. Tell me what kind of pressure you carry."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "greeting",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "",
+    "priority": 94,
+    "line": "Lethia. Tell me whether you need steadier hands or sharper weather."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "status",
+    "channel": "any",
+    "audience": "any",
+    "triggers": "",
+    "priority": 90,
+    "line": "Calm enough. I prefer rhythm over panic."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "general",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 96,
+    "line": "I like parties that know when to breathe."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "party_farm",
+    "channel": "whisper",
+    "audience": "adventurers",
+    "triggers": "farm some exp|exp|xp|lets go farm|let's go farm",
+    "priority": 98,
+    "line": "I will party if the rhythm stays clean. Farm, recover, return. I have no love for groups that burn themselves stupid."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "return_memory",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "remember|he helped before|he ditched|trust him|worth inviting",
+    "priority": 95,
+    "line": "I remember who respected the pace, who let the room breathe, and who only noticed support when it vanished."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "general",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 94,
+    "line": "I can cool flame or feed it. Choose."
+  },
+  {
+    "fpcId": "lethia",
+    "bankType": "social",
+    "category": "pvp_conflict",
+    "channel": "whisper",
+    "audience": "any",
+    "triggers": "pk|player killer|he killed me|kill him|harass|harassing|flame|trash talk|shit talk",
+    "priority": 96,
+    "line": "If he keeps needling, I can answer. If the lane turns bad, I would rather reset in town and come back sharper than bleed for his pride."
+  }
+]

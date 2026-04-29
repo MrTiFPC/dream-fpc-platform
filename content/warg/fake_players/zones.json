@@ -1,0 +1,245 @@
+[
+  {
+    "id": "giran",
+    "enabled": true,
+    "x": 83456,
+    "y": 148632,
+    "z": -3400,
+    "heading": 0,
+    "roamRadius": 260
+  },
+  {
+    "id": "talking_island_village",
+    "enabled": true,
+    "x": -84191,
+    "y": 244531,
+    "z": -3728,
+    "heading": 0,
+    "roamRadius": 260
+  },
+  {
+    "id": "talking_island_east",
+    "enabled": true,
+    "x": -95336,
+    "y": 240478,
+    "z": -3264,
+    "heading": 0,
+    "roamRadius": 420
+  },
+  {
+    "id": "obelisk_of_victory",
+    "enabled": true,
+    "x": -100332,
+    "y": 238019,
+    "z": -3573,
+    "heading": 36864,
+    "roamRadius": 520
+  },
+  {
+    "id": "ruins_of_agony",
+    "enabled": true,
+    "x": -46166,
+    "y": 108893,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 520
+  },
+  {
+    "id": "ruins_of_agony_west",
+    "enabled": true,
+    "x": -46620,
+    "y": 108820,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 280
+  },
+  {
+    "id": "ruins_of_agony_north",
+    "enabled": true,
+    "x": -46292,
+    "y": 109028,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 280
+  },
+  {
+    "id": "ruins_of_agony_east",
+    "enabled": true,
+    "x": -45720,
+    "y": 108860,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 280
+  },
+  {
+    "id": "ruins_of_agony_south",
+    "enabled": true,
+    "x": -46044,
+    "y": 108734,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 280
+  },
+  {
+    "id": "ruins_of_agony_northwest",
+    "enabled": true,
+    "x": -46520,
+    "y": 109180,
+    "z": -3792,
+    "heading": 0,
+    "roamRadius": 280
+  },
+  {
+    "id": "abandoned_camp",
+    "enabled": true,
+    "x": -46427,
+    "y": 147921,
+    "z": -2960,
+    "heading": 0,
+    "roamRadius": 520
+  },
+  {
+    "id": "cruma_1",
+    "enabled": true,
+    "x": 14544,
+    "y": 117197,
+    "z": -12115,
+    "heading": 0,
+    "roamRadius": 420
+  },
+  {
+    "id": "sel_mahum_base_entry",
+    "enabled": true,
+    "x": -48363,
+    "y": 140230,
+    "z": -2944,
+    "heading": 0,
+    "roamRadius": 260
+  },
+  {
+    "id": "sel_mahum_dense_n02",
+    "enabled": true,
+    "x": -56985,
+    "y": 140276,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_n03",
+    "enabled": true,
+    "x": -56035,
+    "y": 139863,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_n04",
+    "enabled": true,
+    "x": -56670,
+    "y": 141254,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_n05",
+    "enabled": true,
+    "x": -56399,
+    "y": 142384,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_n06",
+    "enabled": true,
+    "x": -55594,
+    "y": 141542,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_n07",
+    "enabled": true,
+    "x": -55281,
+    "y": 140498,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 500
+  },
+  {
+    "id": "sel_mahum_dense_west_r05",
+    "enabled": true,
+    "x": -58985,
+    "y": 137278,
+    "z": -2281,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "sel_mahum_dense_southwest_f03",
+    "enabled": true,
+    "x": -55162,
+    "y": 136677,
+    "z": -2689,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "sel_mahum_dense_center_rf10",
+    "enabled": true,
+    "x": -52767,
+    "y": 138752,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "sel_mahum_dense_east_f19",
+    "enabled": true,
+    "x": -50673,
+    "y": 139734,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "sel_mahum_dense_east_f21",
+    "enabled": true,
+    "x": -51737,
+    "y": 140728,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "sel_mahum_dense_northwest_n04",
+    "enabled": true,
+    "x": -56669,
+    "y": 141254,
+    "z": -2865,
+    "heading": 0,
+    "roamRadius": 360
+  },
+  {
+    "id": "talking_island_roien",
+    "enabled": true,
+    "x": -71411,
+    "y": 258255,
+    "z": -3104,
+    "heading": 0,
+    "roamRadius": 160
+  },
+  {
+    "id": "talking_island_gremlin_yard",
+    "enabled": true,
+    "x": -71364,
+    "y": 258332,
+    "z": -3104,
+    "heading": 0,
+    "roamRadius": 520
+  }
+]

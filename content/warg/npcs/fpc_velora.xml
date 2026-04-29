@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- AFPC carrier body for Velora -->
+	<npc id="81005" level="90" type="FriendlyNpc" name="Velora">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="2" hairColor="1" face="0" equipRHand="206" equipChest="2409" equipGloves="5776" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Origin FPC carrier body for Marc -->
+	<npc id="81001" level="85" type="FriendlyNpc" name="Marc">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="47" int="31" dex="43" wit="33" con="43" men="34">
+			<vitals hp="19840" hpRegen="11.0" mp="3240" mpRegen="3.0" />
+			<attack physical="4060" magical="1360" random="24" critical="108" accuracy="138" attackSpeed="412" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1780" magical="1480" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+				<attack type="DARK" value="150" />
+			</attribute>
+			<speed>
+				<walk ground="82" />
+				<run ground="132" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<skillList>
+			<!-- Match the Assassin class toggle that drives the special armor body. -->
+			<skill id="87344" level="1" />
+		</skillList>
+		<!-- Player-like appearance is driven by fakePlayer classId and equipped visual item ids. -->
+		<fakePlayer classId="224" hair="0" hairColor="1" face="1" equipRHand="92408" equipHead="94083" equipChest="93315" equipLegs="93316" equipGloves="93075" equipFeet="94085" equipCloak="97452" equipHair2="97259" weaponEnchantLevel="5" armorEnchantLevel="5" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>

@@ -1,0 +1,10 @@
+{
+  "moodTag": "confident",
+  "intentPreference": "farm",
+  "zoneBias": "abandoned_camp",
+  "aggressionRiskScore": 0.61,
+  "speakNow": true,
+  "lineStyleTag": "casual_short",
+  "topicTag": "grind",
+  "confidence": 0.84
+}

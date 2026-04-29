@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FPC Studio</title>
+    <link rel="stylesheet" href="/studio/assets/studio.css?v=20260327q" />
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <div>
+        <h1>FPC Studio</h1>
+        <p>Portable control plane, authoring studio, and workflow surface for the independent NPC platform.</p>
+      </div>
+      <div class="brand-actions">
+        <div class="workspace-toggle">
+          <button id="studio-workspace-monitor" class="btn mini" onclick="setStudioWorkspace('monitor')">Monitor</button>
+          <button id="studio-workspace-create" class="btn mini" onclick="setStudioWorkspace('create')">Create</button>
+          <button id="studio-workspace-dev" class="btn mini" onclick="setStudioWorkspace('dev')">Dev</button>
+        </div>
+        <div id="studio-mode-summary" class="panel-meta">Create keeps the Warg-first tutorial, world creation, and library lanes visible.</div>
+        <div class="brand-pill">Dream FPC Platform</div>
+      </div>
+    </div>
+    <div id="runtime" class="panel panel-runtime">
+      <h2>Runtime</h2>
+      <div class="muted">Loading runtime snapshot...</div>
+    </div>
+    <div class="layout">
+      <aside id="studio-sidebar-panel" class="panel sidebar">
+        <div class="workspace-head">
+          <div>
+            <h2>Roster</h2>
+            <div id="roster-meta" class="panel-meta">Loading roster metadata...</div>
+          </div>
+        </div>
+        <div class="filter-grid">
+          <div class="field">
+            <label>Type</label>
+            <select id="roster-type-filter">
+              <option value="all">All</option>
+              <option value="FPC">Social FPCs</option>
+              <option value="AFPC">AFPCs</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Filter</label>
+            <input id="roster-filter" type="text" placeholder="Search name, zone, archetype, target..." />
+          </div>
+        </div>
+        <div id="roster" class="roster-list">
+          <div class="muted">Loading roster...</div>
+        </div>
+      </aside>
+      <section class="workspace">
+        <div id="studio-detail-panel" class="panel">
+          <div class="workspace-head">
+            <div>
+              <h2>FPC Detail</h2>
+              <div class="panel-meta">Platform-owned snapshot, persona seam, and current runtime state.</div>
+            </div>
+            <div id="selected-meta" class="selection-pill">No active selection</div>
+          </div>
+          <div id="detail" class="muted">Select a roster entry to inspect the platform-owned detail snapshot.</div>
+        </div>
+        <div id="studio-lab-panel" class="panel">
+          <div class="workspace-head">
+            <div>
+              <h2 id="studio-lab-title">Create Workspace</h2>
+              <div id="studio-lab-summary" class="panel-meta">Warg-first tutorials, world creation, and world-library follow-through live here.</div>
+            </div>
+          </div>
+          <div id="lab" class="muted">Select a roster entry to run a non-emitting conversation probe through the studio queue.</div>
+        </div>
+      </section>
+    </div>
+  </div>
+    <script src="/studio/assets/studio.js?v=20260327q"></script>
+  </body>
+</html>

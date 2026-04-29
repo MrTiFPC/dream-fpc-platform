@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<!-- Wave 1 multiplied social FPC carriers -->
+	<npc id="81010" level="78" type="Folk" name="Orian">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="103" int="40" dex="53" wit="37" con="84" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="10198" magical="1305" random="30" critical="132" accuracy="177" attackSpeed="588" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3388" magical="2450" />
+			<attribute>
+				<defence fire="200" water="250" wind="250" earth="250" holy="250" dark="250" />
+				<attack type="WATER" value="330" />
+			</attribute>
+			<speed>
+				<walk ground="85" />
+				<run ground="139" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<skillList>
+			<skill id="87344" level="1" />
+		</skillList>
+		<fakePlayer classId="224" hair="2" hairColor="0" face="0" equipRHand="232" equipHead="2419" equipGloves="2455" equipChest="398" equipLegs="418" equipFeet="2431" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81011" level="78" type="Folk" name="Selene">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="96" int="46" dex="50" wit="41" con="78" men="41">
+			<vitals hp="17450" hpRegen="10.2" mp="4010" mpRegen="3.1" />
+			<attack physical="8840" magical="1450" random="28" critical="120" accuracy="170" attackSpeed="560" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="2520" />
+			<speed>
+				<walk ground="84" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="107" hair="1" hairColor="2" face="1" equipRHand="5706" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" equipHair="0" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="81012" level="78" type="Folk" name="Bram">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="103" int="40" dex="53" wit="37" con="84" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="10198" magical="1305" random="30" critical="132" accuracy="177" attackSpeed="588" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3388" magical="2450" />
+			<speed>
+				<walk ground="85" />
+				<run ground="139" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<skillList>
+			<skill id="87344" level="1" />
+		</skillList>
+		<fakePlayer classId="224" hair="0" hairColor="2" face="1" equipRHand="232" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" equipHair2="0" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81013" level="85" type="Folk" name="Vesryn">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3213" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<attack physical="1188" magical="812" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="362" magical="265" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="1" hairColor="0" face="0" equipRHand="206" equipHead="2419" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81014" level="85" type="Folk" name="Mirelle">
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3213" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<attack physical="1188" magical="812" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="362" magical="265" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="107" hair="2" hairColor="1" face="1" equipRHand="5706" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="24" />
+		</collision>
+	</npc>
+
+	<!-- Wave 1 multiplied AFPC carriers -->
+	<npc id="81015" level="45" type="FriendlyNpc" name="Brenna">
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="0" hairColor="2" face="1" equipRHand="232" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="81016" level="45" type="FriendlyNpc" name="Tovin">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="2" hairColor="0" face="0" equipRHand="232" equipHead="2419" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="81017" level="45" type="FriendlyNpc" name="Mika">
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="1" hairColor="1" face="0" equipRHand="232" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="81018" level="45" type="FriendlyNpc" name="Doran">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="0" hairColor="1" face="1" equipRHand="232" equipHead="2419" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="81019" level="45" type="FriendlyNpc" name="Helsi">
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="90" int="35" dex="48" wit="32" con="78" men="34">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="70" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="55" hair="2" hairColor="2" face="1" equipRHand="232" equipChest="398" equipLegs="418" equipGloves="2455" equipFeet="2431" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="81020" level="45" type="FriendlyNpc" name="Aerin">
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="1" hairColor="1" face="0" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81021" level="45" type="FriendlyNpc" name="Loric">
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="2" hairColor="0" face="1" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81022" level="45" type="FriendlyNpc" name="Sable">
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="0" hairColor="2" face="0" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81023" level="45" type="FriendlyNpc" name="Iona">
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="1" hairColor="0" face="1" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81024" level="45" type="FriendlyNpc" name="Renly">
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="78" int="44" dex="40" wit="40" con="70" men="38">
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688" magical="470" random="20" critical="4" accuracy="95" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295" magical="216" />
+			<speed>
+				<walk ground="72" />
+				<run ground="122" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="27" hair="0" hairColor="1" face="0" equipRHand="206" equipHead="2419" equipGloves="5774" equipChest="2383" equipFeet="5786" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81025" level="90" type="FriendlyNpc" name="Nymera">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="1" hairColor="2" face="0" equipRHand="206" equipHead="2419" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81026" level="90" type="FriendlyNpc" name="Sorrel">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="0" hairColor="1" face="1" equipRHand="206" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81027" level="90" type="FriendlyNpc" name="Thalen">
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="2" hairColor="0" face="0" equipRHand="206" equipHead="2419" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81028" level="90" type="FriendlyNpc" name="Veska">
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="1" hairColor="1" face="1" equipRHand="206" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="81029" level="90" type="FriendlyNpc" name="Riven">
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<stats str="41" int="53" dex="34" wit="46" con="43" men="39">
+			<vitals hp="18857" hpRegen="10.8" mp="3863" mpRegen="3.0" />
+			<attack physical="3520" magical="2150" random="20" critical="4" accuracy="120" attackSpeed="333" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1700" magical="1520" />
+			<speed>
+				<walk ground="80" />
+				<run ground="128" />
+			</speed>
+		</stats>
+		<status talkable="false" randomAnimation="false" randomWalk="false" undying="true" attackable="false" />
+		<fakePlayer classId="110" hair="0" hairColor="2" face="0" equipRHand="206" equipHead="2419" equipGloves="5776" equipChest="2409" equipFeet="5788" />
+		<collision>
+			<radius normal="7.5" />
+			<height normal="23" />
+		</collision>
+	</npc>
+</list>
