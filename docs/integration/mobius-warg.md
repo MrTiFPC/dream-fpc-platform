@@ -14,7 +14,11 @@ The public platform source keeps Mobius package context so it can be reviewed an
 - `control-plane/sidecar`: Studio and sidecar control-plane code.
 - `content/warg/fake_players`: public Warg FPC data examples.
 - `content/warg/npcs`: public Warg FPC carrier NPC examples.
+- `content/warg/skills/custom`: public FPC passive skill definitions required by the example elite loadouts.
 - `integration/mobius/config/FakePlayerPlatform.ini`: public Warg community config template.
+- `integration/mobius/config/FakePlayers.ini`: legacy Mobius fake-player carrier gate template with FPC loading enabled.
+- `integration/mobius/apply-warg-host-hooks.ps1`: Windows helper that applies the clean Warg host hook patch.
+- `integration/mobius/patches/warg-host-hooks.patch`: clean Warg host hook patch used by the helper.
 - `integration/mobius/sql`: public FPC social and hybrid-clan schemas.
 
 ## Integration Shape
@@ -22,9 +26,15 @@ The public platform source keeps Mobius package context so it can be reviewed an
 1. Copy the platform Java files into the matching package paths in a Warg source tree.
 2. Copy the config template into the Warg `dist/game/config/Custom` folder.
 3. Copy the Warg FPC content into the matching `dist/game/data` folders.
-4. Apply the SQL schemas to the game database if you enable social memory or hybrid clan state.
-5. Apply Mobius host hooks or patches once the public patch kit is generated.
+4. Apply the host hook patch with `integration/mobius/apply-warg-host-hooks.ps1`.
+5. Apply the SQL schemas to the game database if you enable social memory or hybrid clan state.
 6. Build the Warg server from source and validate logs before in-game testing.
+
+Example patch command:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File <dream-fpc-platform>\integration\mobius\apply-warg-host-hooks.ps1 -WargSource <warg-source>
+```
 
 ## Boundaries
 

@@ -41,6 +41,7 @@ dream-fpc-platform/
   integration/
     mobius/
       config/
+      patches/
       sql/
 ```
 
@@ -60,9 +61,9 @@ For fuller setup notes, read `INSTALL.md`.
 
 1. Start from a clean L2J Mobius Essence 09.1 Warg workspace.
 2. Review `docs/integration/mobius-warg.md`.
-3. Apply or copy the Warg integration material from `integration/mobius`.
-4. Place the platform Java source into the matching Mobius package paths.
-5. Copy the Warg example data from `content/warg` into the matching datapack locations.
+3. Place the platform Java source into the matching Mobius package paths.
+4. Copy the Warg config and example data into the matching datapack locations.
+5. Apply the Warg host hook patch with `integration/mobius/apply-warg-host-hooks.ps1`.
 6. Start the sidecar from `control-plane/sidecar` if you want Studio or external personality decisions.
 7. Build and validate in your own Warg server runtime.
 

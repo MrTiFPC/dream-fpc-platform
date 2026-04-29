@@ -1,0 +1,1184 @@
+diff --git a/dist/game/data/scripts/handlers/skill/effects/SummonShadow.java b/dist/game/data/scripts/handlers/skill/effects/SummonShadow.java
+index 6590afd..f7ca6ae 100644
+--- a/dist/game/data/scripts/handlers/skill/effects/SummonShadow.java
++++ b/dist/game/data/scripts/handlers/skill/effects/SummonShadow.java
+@@ -75,6 +75,10 @@ public class SummonShadow extends AbstractEffect
+ 		}
+ 		
+ 		final Player player = effector.asPlayer();
++		if (player == null)
++		{
++			return;
++		}
+ 		if (player.isMounted())
+ 		{
+ 			return;
+diff --git a/java/org/l2jmobius/gameserver/GameServer.java b/java/org/l2jmobius/gameserver/GameServer.java
+index 9fac175..6dd7e92 100644
+--- a/java/org/l2jmobius/gameserver/GameServer.java
++++ b/java/org/l2jmobius/gameserver/GameServer.java
+@@ -148,6 +148,7 @@ import org.l2jmobius.gameserver.data.xml.TimedHuntingZoneData;
+ import org.l2jmobius.gameserver.data.xml.TransformData;
+ import org.l2jmobius.gameserver.data.xml.VariationData;
+ import org.l2jmobius.gameserver.data.xml.VipData;
++import org.l2jmobius.gameserver.fakeplayer.FakePlayerBootstrap;
+ import org.l2jmobius.gameserver.geoengine.GeoEngine;
+ import org.l2jmobius.gameserver.handler.ConditionHandler;
+ import org.l2jmobius.gameserver.handler.DailyMissionHandler;
+@@ -400,7 +401,7 @@ public class GameServer
+ 		
+ 		printSection("NPCs");
+ 		NpcData.getInstance();
+-		FakePlayerChatManager.getInstance();
++		FakePlayerBootstrap.bootstrapLegacyChat();
+ 		SpawnData.getInstance();
+ 		WalkingManager.getInstance();
+ 		StaticObjectData.getInstance();
+@@ -558,6 +559,8 @@ public class GameServer
+ 			deadlockWatcher.start();
+ 		}
+ 		
++		FakePlayerBootstrap.bootstrapPlatform();
++
+ 		System.gc();
+ 		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
+ 		LOGGER.info(StringUtil.concat(getClass().getSimpleName(), ": Started, using ", getUsedMemoryMB(), " of ", totalMem, " MB total memory."));
+diff --git a/java/org/l2jmobius/gameserver/config/ConfigLoader.java b/java/org/l2jmobius/gameserver/config/ConfigLoader.java
+index f3cd7f5..4f36980 100644
+--- a/java/org/l2jmobius/gameserver/config/ConfigLoader.java
++++ b/java/org/l2jmobius/gameserver/config/ConfigLoader.java
+@@ -35,6 +35,7 @@ import org.l2jmobius.gameserver.config.custom.CustomMailManagerConfig;
+ import org.l2jmobius.gameserver.config.custom.DelevelManagerConfig;
+ import org.l2jmobius.gameserver.config.custom.DualboxCheckConfig;
+ import org.l2jmobius.gameserver.config.custom.FactionSystemConfig;
++import org.l2jmobius.gameserver.config.custom.FakePlayerPlatformConfig;
+ import org.l2jmobius.gameserver.config.custom.FakePlayersConfig;
+ import org.l2jmobius.gameserver.config.custom.FindPvpConfig;
+ import org.l2jmobius.gameserver.config.custom.FreeMountsConfig;
+@@ -119,6 +120,7 @@ public class ConfigLoader
+ 		DelevelManagerConfig.load();
+ 		DualboxCheckConfig.load();
+ 		FactionSystemConfig.load();
++		FakePlayerPlatformConfig.load();
+ 		FakePlayersConfig.load();
+ 		FindPvpConfig.load();
+ 		FreeMountsConfig.load();
+diff --git a/java/org/l2jmobius/gameserver/data/xml/TeleportListData.java b/java/org/l2jmobius/gameserver/data/xml/TeleportListData.java
+index 00d3624..680f0b8 100644
+--- a/java/org/l2jmobius/gameserver/data/xml/TeleportListData.java
++++ b/java/org/l2jmobius/gameserver/data/xml/TeleportListData.java
+@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.data.xml;
+ 
+ import java.io.File;
+ import java.util.ArrayList;
++import java.util.Collection;
+ import java.util.HashMap;
+ import java.util.List;
+ import java.util.Map;
+@@ -99,6 +100,11 @@ public class TeleportListData implements IXmlReader
+ 	{
+ 		return _teleports.get(teleportId);
+ 	}
++
++	public Collection<TeleportListHolder> getTeleports()
++	{
++		return _teleports.values();
++	}
+ 	
+ 	/**
+ 	 * Gets the total count of available teleports.
+diff --git a/java/org/l2jmobius/gameserver/handler/AdminCommandHandler.java b/java/org/l2jmobius/gameserver/handler/AdminCommandHandler.java
+index a7faa2c..999ce1d 100644
+--- a/java/org/l2jmobius/gameserver/handler/AdminCommandHandler.java
++++ b/java/org/l2jmobius/gameserver/handler/AdminCommandHandler.java
+@@ -104,7 +104,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
+ 			return;
+ 		}
+ 		
+-		if (useConfirm && AdminData.getInstance().requireConfirm(command))
++		if (useConfirm && !isNoConfirmPanelCommand(command) && AdminData.getInstance().requireConfirm(command))
+ 		{
+ 			player.setAdminConfirmCmd(fullCommand);
+ 			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1_3);
+@@ -144,6 +144,11 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
+ 			});
+ 		}
+ 	}
++
++	private static boolean isNoConfirmPanelCommand(String command)
++	{
++		return command.equals("admin_fpc") || command.equals("admin_fpc_list") || command.startsWith("admin_fpc_");
++	}
+ 	
+ 	@Override
+ 	public int size()
+diff --git a/java/org/l2jmobius/gameserver/model/actor/status/NpcStatus.java b/java/org/l2jmobius/gameserver/model/actor/status/NpcStatus.java
+index d141130..51e862d 100644
+--- a/java/org/l2jmobius/gameserver/model/actor/status/NpcStatus.java
++++ b/java/org/l2jmobius/gameserver/model/actor/status/NpcStatus.java
+@@ -20,13 +20,19 @@
+  */
+ package org.l2jmobius.gameserver.model.actor.status;
+ 
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridPartyService;
+ import org.l2jmobius.gameserver.model.actor.Creature;
+ import org.l2jmobius.gameserver.model.actor.Npc;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.actor.holders.player.Duel;
++import org.l2jmobius.gameserver.model.actor.instance.Guardian;
++import org.l2jmobius.gameserver.model.stats.Stat;
+ 
+ public class NpcStatus extends CreatureStatus
+ {
++	private double _currentCp = 0;
++	private int _syntheticCpMax = 0;
++
+ 	public NpcStatus(Npc activeChar)
+ 	{
+ 		super(activeChar);
+@@ -59,7 +65,34 @@ public class NpcStatus extends CreatureStatus
+ 			npc.addAttackerToAttackByList(attacker);
+ 		}
+ 		
+-		super.reduceHp(value, attacker, awake, isDOT, isHpConsumption);
++		double amount = value;
++		boolean cpWasChanged = false;
++		if ((amount > 0) && shouldDamageSyntheticCp(attacker))
++		{
++			if (_currentCp >= amount)
++			{
++				setCurrentCp(_currentCp - amount, false);
++				amount = 0;
++				cpWasChanged = true;
++			}
++			else if (_currentCp > 0)
++			{
++				amount -= _currentCp;
++				setCurrentCp(0, false);
++				cpWasChanged = true;
++			}
++		}
++
++		super.reduceHp(amount, attacker, awake, isDOT, isHpConsumption);
++		if (cpWasChanged && (amount <= 0))
++		{
++			npc.broadcastStatusUpdate();
++		}
++	}
++
++	private boolean shouldDamageSyntheticCp(Creature attacker)
++	{
++		return (attacker != null) && (attacker.isPlayable() || attacker.isFakePlayer() || (attacker instanceof Guardian));
+ 	}
+ 	
+ 	@Override
+@@ -67,4 +100,153 @@ public class NpcStatus extends CreatureStatus
+ 	{
+ 		return super.getActiveChar().asNpc();
+ 	}
++
++	@Override
++	public double getCurrentCp()
++	{
++		return _currentCp;
++	}
++
++	public int getMaxCp()
++	{
++		return _syntheticCpMax;
++	}
++
++	public void initializeSyntheticCp(int maxCp)
++	{
++		_syntheticCpMax = Math.max(0, maxCp);
++		_currentCp = _syntheticCpMax;
++		if (_currentCp > 0)
++		{
++			_flagsRegenActive |= REGEN_FLAG_CP;
++			startHpMpRegeneration();
++		}
++		else
++		{
++			_flagsRegenActive &= ~REGEN_FLAG_CP;
++			if (_flagsRegenActive == 0)
++			{
++				stopHpMpRegeneration();
++			}
++		}
++	}
++
++	@Override
++	public void setCurrentCp(double newCp)
++	{
++		setCurrentCp(newCp, true);
++	}
++
++	@Override
++	public void setCurrentCp(double value, boolean broadcastPacket)
++	{
++		final int currentCp = (int) _currentCp;
++		final Npc npc = getActiveChar();
++		final int maxCp = _syntheticCpMax;
++
++		synchronized (this)
++		{
++			if (npc.isDead())
++			{
++				return;
++			}
++
++			final double newCp = Math.max(0, value);
++			if (maxCp <= 0)
++			{
++				_currentCp = 0;
++				_flagsRegenActive &= ~REGEN_FLAG_CP;
++				if (_flagsRegenActive == 0)
++				{
++					stopHpMpRegeneration();
++				}
++			}
++			else if (newCp >= maxCp)
++			{
++				_currentCp = maxCp;
++				_flagsRegenActive &= ~REGEN_FLAG_CP;
++				if (_flagsRegenActive == 0)
++				{
++					stopHpMpRegeneration();
++				}
++			}
++			else
++			{
++				_currentCp = newCp;
++				if (_currentCp > 0)
++				{
++					_flagsRegenActive |= REGEN_FLAG_CP;
++					startHpMpRegeneration();
++				}
++				else
++				{
++					_flagsRegenActive &= ~REGEN_FLAG_CP;
++					if (_flagsRegenActive == 0)
++					{
++						stopHpMpRegeneration();
++					}
++				}
++			}
++		}
++
++		if (currentCp != _currentCp)
++		{
++			final FakePlayerHybridPartyService hybridPartyService = npc.isFakePlayer() ? FakePlayerHybridPartyService.getInstance() : null;
++			if (hybridPartyService != null)
++			{
++				hybridPartyService.refreshPartyWindowsForNpc(npc);
++				if (!broadcastPacket)
++				{
++					hybridPartyService.broadcastHybridPartyVitalsUpdate(npc);
++				}
++			}
++			if (broadcastPacket)
++			{
++				npc.broadcastStatusUpdate();
++			}
++		}
++	}
++
++	@Override
++	protected void doRegeneration()
++	{
++		final Npc npc = getActiveChar();
++		if (npc.isDead())
++		{
++			stopHpMpRegeneration();
++			return;
++		}
++
++		final int maxCp = _syntheticCpMax;
++		boolean changed = false;
++		if ((maxCp > 0) && (_currentCp < maxCp))
++		{
++			final double nextCp = _currentCp + npc.getStat().getValue(Stat.REGENERATE_CP_RATE);
++			setCurrentCp(nextCp, false);
++			changed = true;
++		}
++
++		final double currentHp = getCurrentHp();
++		if (currentHp < npc.getStat().getMaxRecoverableHp())
++		{
++			setCurrentHp(currentHp + npc.getStat().getValue(Stat.REGENERATE_HP_RATE), false);
++			changed = true;
++		}
++
++		final double currentMp = getCurrentMp();
++		if (currentMp < npc.getStat().getMaxRecoverableMp())
++		{
++			setCurrentMp(currentMp + npc.getStat().getValue(Stat.REGENERATE_MP_RATE), false);
++			changed = true;
++		}
++
++		if (changed)
++		{
++			npc.broadcastStatusUpdate();
++		}
++		else
++		{
++			stopHpMpRegeneration();
++		}
++	}
+ }
+diff --git a/java/org/l2jmobius/gameserver/model/clan/ClanWar.java b/java/org/l2jmobius/gameserver/model/clan/ClanWar.java
+index 3c29bc5..e322733 100644
+--- a/java/org/l2jmobius/gameserver/model/clan/ClanWar.java
++++ b/java/org/l2jmobius/gameserver/model/clan/ClanWar.java
+@@ -178,6 +178,56 @@ public class ClanWar
+ 			}
+ 		}
+ 	}
++
++	public void onHybridKill(Clan killerClan, Clan victimClan, int victimLevel, int victimReputation)
++	{
++		if ((killerClan == null) || (victimClan == null))
++		{
++			return;
++		}
++
++		if ((_state == ClanWarState.MUTUAL) && (victimLevel > 4))
++		{
++			if (killerClan.getId() == _attackerClanId)
++			{
++				_attackerKillCount.incrementAndGet();
++			}
++			else
++			{
++				_attackedKillCount.incrementAndGet();
++			}
++			return;
++		}
++
++		if ((_state == ClanWarState.BLOOD_DECLARATION) && (victimClan.getId() == _attackerClanId) && (victimReputation >= 0))
++		{
++			final int killCount = _attackedKillCount.incrementAndGet();
++			if (killCount >= 5)
++			{
++				_state = ClanWarState.MUTUAL;
++				SystemMessage sm = new SystemMessage(SystemMessageId.A_CLAN_WAR_WITH_CLAN_S1_HAS_STARTED_THE_CLAN_THAT_CANCELS_THE_WAR_FIRST_WILL_LOSE_500_CLAN_REPUTATION_POINTS_IF_YOUR_CLAN_MEMBER_GETS_KILLED_BY_THE_OTHER_CLAN_XP_DECREASES_BY_1_4_OF_THE_AMOUNT_THAT_DECREASES_IN_HUNTING_ZONES);
++				sm.addString(victimClan.getName());
++				killerClan.broadcastToOnlineMembers(sm);
++
++				sm = new SystemMessage(SystemMessageId.A_CLAN_WAR_WITH_CLAN_S1_HAS_STARTED_THE_CLAN_THAT_CANCELS_THE_WAR_FIRST_WILL_LOSE_500_CLAN_REPUTATION_POINTS_IF_YOUR_CLAN_MEMBER_GETS_KILLED_BY_THE_OTHER_CLAN_XP_DECREASES_BY_1_4_OF_THE_AMOUNT_THAT_DECREASES_IN_HUNTING_ZONES);
++				sm.addString(killerClan.getName());
++				victimClan.broadcastToOnlineMembers(sm);
++
++				if (_cancelTask != null)
++				{
++					_cancelTask.cancel(true);
++					_cancelTask = null;
++				}
++			}
++			else
++			{
++				final SystemMessage sm = new SystemMessage(SystemMessageId.A_CLAN_MEMBER_OF_S1_WAS_KILLED_BY_YOUR_CLAN_MEMBER_IF_YOUR_CLAN_KILLS_S2_MEMBERS_OF_CLAN_S1_A_CLAN_WAR_WITH_CLAN_S1_WILL_START);
++				sm.addString(victimClan.getName());
++				sm.addInt(5 - killCount);
++				killerClan.broadcastToOnlineMembers(sm);
++			}
++		}
++	}
+ 	
+ 	public void cancel(Player player, Clan cancelor)
+ 	{
+diff --git a/java/org/l2jmobius/gameserver/model/groups/Party.java b/java/org/l2jmobius/gameserver/model/groups/Party.java
+index 0323b45..fcaca35 100644
+--- a/java/org/l2jmobius/gameserver/model/groups/Party.java
++++ b/java/org/l2jmobius/gameserver/model/groups/Party.java
+@@ -16,6 +16,7 @@
+  */
+ package org.l2jmobius.gameserver.model.groups;
+ 
++import java.lang.reflect.Method;
+ import java.time.Duration;
+ import java.util.ArrayList;
+ import java.util.HashMap;
+@@ -42,6 +43,7 @@ import org.l2jmobius.gameserver.managers.DuelManager;
+ import org.l2jmobius.gameserver.managers.ItemManager;
+ import org.l2jmobius.gameserver.managers.MagicLampManager;
+ import org.l2jmobius.gameserver.managers.PcCafePointsManager;
++import org.l2jmobius.gameserver.model.Location;
+ import org.l2jmobius.gameserver.model.World;
+ import org.l2jmobius.gameserver.model.actor.Attackable;
+ import org.l2jmobius.gameserver.model.actor.Creature;
+@@ -93,6 +95,7 @@ public class Party extends AbstractPlayerGroup
+ 	
+ 	private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
+ 	private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
++	private static final String HYBRID_PARTY_SERVICE_CLASS = "org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridPartyService";
+ 	
+ 	private final List<Player> _members = new CopyOnWriteArrayList<>();
+ 	private boolean _pendingInvitation = false;
+@@ -116,6 +119,131 @@ public class Party extends AbstractPlayerGroup
+ 		2666,
+ 		2667
+ 	};
++
++	public static final class HybridPartyMember
++	{
++		private final int _objectId;
++		private final String _name;
++		private final int _currentCp;
++		private final int _maxCp;
++		private final int _currentHp;
++		private final int _maxHp;
++		private final int _currentMp;
++		private final int _maxMp;
++		private final int _vitalityPoints;
++		private final int _level;
++		private final int _playerClassId;
++		private final int _raceOrdinal;
++		private final int _summonCount;
++		private final int _x;
++		private final int _y;
++		private final int _z;
++
++		public HybridPartyMember(int objectId, String name, int currentCp, int maxCp, int currentHp, int maxHp, int currentMp, int maxMp, int vitalityPoints, int level, int playerClassId, int raceOrdinal, int summonCount, int x, int y, int z)
++		{
++			_objectId = objectId;
++			_name = (name == null) ? "" : name;
++			_currentCp = currentCp;
++			_maxCp = maxCp;
++			_currentHp = currentHp;
++			_maxHp = maxHp;
++			_currentMp = currentMp;
++			_maxMp = maxMp;
++			_vitalityPoints = vitalityPoints;
++			_level = level;
++			_playerClassId = playerClassId;
++			_raceOrdinal = raceOrdinal;
++			_summonCount = summonCount;
++			_x = x;
++			_y = y;
++			_z = z;
++		}
++
++		public int getObjectId()
++		{
++			return _objectId;
++		}
++
++		public String getName()
++		{
++			return _name;
++		}
++
++		public int getCurrentCp()
++		{
++			return _currentCp;
++		}
++
++		public int getMaxCp()
++		{
++			return _maxCp;
++		}
++
++		public int getCurrentHp()
++		{
++			return _currentHp;
++		}
++
++		public int getMaxHp()
++		{
++			return _maxHp;
++		}
++
++		public int getCurrentMp()
++		{
++			return _currentMp;
++		}
++
++		public int getMaxMp()
++		{
++			return _maxMp;
++		}
++
++		public int getVitalityPoints()
++		{
++			return _vitalityPoints;
++		}
++
++		public int getLevel()
++		{
++			return _level;
++		}
++
++		public int getPlayerClassId()
++		{
++			return _playerClassId;
++		}
++
++		public int getRaceOrdinal()
++		{
++			return _raceOrdinal;
++		}
++
++		public int getSummonCount()
++		{
++			return _summonCount;
++		}
++
++		public int getX()
++		{
++			return _x;
++		}
++
++		public int getY()
++		{
++			return _y;
++		}
++
++		public int getZ()
++		{
++			return _z;
++		}
++
++		public Location getLocation()
++		{
++			return new Location(_x, _y, _z);
++		}
++	}
+ 	
+ 	/**
+ 	 * Construct a new Party object with a single member - the leader.
+@@ -312,6 +440,8 @@ public class Party extends AbstractPlayerGroup
+ 		// sends new member party window for all members
+ 		// we do all actions before adding member to a list, this speeds things up a little
+ 		player.sendPacket(new PartySmallWindowAll(player, this));
++
++		final boolean hasHybridMembers = hasHybridPartyMembers();
+ 		
+ 		// sends pets/summons of party members
+ 		for (Player pMember : _members)
+@@ -339,7 +469,14 @@ public class Party extends AbstractPlayerGroup
+ 		{
+ 			if (member != player)
+ 			{
+-				member.sendPacket(new PartySmallWindowAdd(player, this));
++				if (hasHybridMembers)
++				{
++					member.sendPacket(new PartySmallWindowAll(member, this));
++				}
++				else
++				{
++					member.sendPacket(new PartySmallWindowAdd(player, this));
++				}
+ 			}
+ 		}
+ 		
+@@ -415,6 +552,80 @@ public class Party extends AbstractPlayerGroup
+ 		applyTacticalSigns(player, false);
+ 		World.getInstance().incrementPartyMember();
+ 	}
++
++	public boolean hasHybridPartyMembers()
++	{
++		return !getHybridPartyMembers().isEmpty();
++	}
++
++	public List<HybridPartyMember> getHybridPartyMembers()
++	{
++		final Object service = getHybridPartyService();
++		if (service == null)
++		{
++			return List.of();
++		}
++
++		try
++		{
++			final Method method = service.getClass().getMethod("getHybridPartyMembers", Party.class);
++			final Object result = method.invoke(service, this);
++			return normalizeHybridPartyMembers(result);
++		}
++		catch (ReflectiveOperationException | IllegalArgumentException e)
++		{
++			LOGGER.log(Level.FINE, getClass().getSimpleName() + ": Unable to resolve hybrid party members", e);
++			return List.of();
++		}
++	}
++
++	private Object getHybridPartyService()
++	{
++		try
++		{
++			final Class<?> serviceClass = Class.forName(HYBRID_PARTY_SERVICE_CLASS);
++			final Method getInstance = serviceClass.getMethod("getInstance");
++			return getInstance.invoke(null);
++		}
++		catch (ReflectiveOperationException | IllegalArgumentException e)
++		{
++			return null;
++		}
++	}
++
++	private List<HybridPartyMember> normalizeHybridPartyMembers(Object result)
++	{
++		if (result == null)
++		{
++			return List.of();
++		}
++
++		final List<HybridPartyMember> members = new ArrayList<>();
++		if (result instanceof Iterable<?> iterable)
++		{
++			for (Object entry : iterable)
++			{
++				if (entry instanceof HybridPartyMember hybridMember)
++				{
++					members.add(hybridMember);
++				}
++			}
++			return members;
++		}
++
++		if (result.getClass().isArray())
++		{
++			final Object[] array = (Object[]) result;
++			for (Object entry : array)
++			{
++				if (entry instanceof HybridPartyMember hybridMember)
++				{
++					members.add(hybridMember);
++				}
++			}
++		}
++		return members;
++	}
+ 	
+ 	private Map<Integer, Creature> getTacticalSigns()
+ 	{
+diff --git a/java/org/l2jmobius/gameserver/network/clientpackets/RequestPledgeMemberInfo.java b/java/org/l2jmobius/gameserver/network/clientpackets/RequestPledgeMemberInfo.java
+index 44265d3..3c90934 100644
+--- a/java/org/l2jmobius/gameserver/network/clientpackets/RequestPledgeMemberInfo.java
++++ b/java/org/l2jmobius/gameserver/network/clientpackets/RequestPledgeMemberInfo.java
+@@ -16,6 +16,8 @@
+  */
+ package org.l2jmobius.gameserver.network.clientpackets;
+ 
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService;
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService.HybridClanMemberSnapshot;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.clan.Clan;
+ import org.l2jmobius.gameserver.model.clan.ClanMember;
+@@ -57,11 +59,24 @@ public class RequestPledgeMemberInfo extends ClientPacket
+ 		}
+ 		
+ 		final ClanMember member = clan.getClanMember(_player);
+-		if (member == null)
++		if (member != null)
+ 		{
++			player.sendPacket(new PledgeReceiveMemberInfo(member));
+ 			return;
+ 		}
+-		
+-		player.sendPacket(new PledgeReceiveMemberInfo(member));
++
++		final FakePlayerHybridClanService hybridClanService = FakePlayerHybridClanService.getInstance();
++		if (hybridClanService == null)
++		{
++			return;
++		}
++
++		final HybridClanMemberSnapshot hybridMember = hybridClanService.getHybridClanMember(clan, _player);
++		if (hybridMember == null)
++		{
++			return;
++		}
++
++		player.sendPacket(new PledgeReceiveMemberInfo(hybridMember));
+ 	}
+ }
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PartyMemberPosition.java b/java/org/l2jmobius/gameserver/network/serverpackets/PartyMemberPosition.java
+index 7c07fa0..d768e50 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PartyMemberPosition.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PartyMemberPosition.java
+@@ -24,6 +24,7 @@ import org.l2jmobius.commons.network.WritableBuffer;
+ import org.l2jmobius.gameserver.model.Location;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.groups.Party;
++import org.l2jmobius.gameserver.model.groups.Party.HybridPartyMember;
+ import org.l2jmobius.gameserver.network.GameClient;
+ import org.l2jmobius.gameserver.network.ServerPackets;
+ 
+@@ -48,7 +49,17 @@ public class PartyMemberPosition extends ServerPacket
+ 			{
+ 				continue;
+ 			}
+-			
++
++			locations.put(member.getObjectId(), member.getLocation());
++		}
++
++		for (HybridPartyMember member : party.getHybridPartyMembers())
++		{
++			if ((member == null) || locations.containsKey(member.getObjectId()))
++			{
++				continue;
++			}
++
+ 			locations.put(member.getObjectId(), member.getLocation());
+ 		}
+ 	}
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowAll.java b/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowAll.java
+index f0badeb..7ec30fa 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowAll.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowAll.java
+@@ -20,10 +20,16 @@
+  */
+ package org.l2jmobius.gameserver.network.serverpackets;
+ 
++import java.util.ArrayList;
++import java.util.HashSet;
++import java.util.List;
++import java.util.Set;
++
+ import org.l2jmobius.commons.network.WritableBuffer;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.actor.Summon;
+ import org.l2jmobius.gameserver.model.groups.Party;
++import org.l2jmobius.gameserver.model.groups.Party.HybridPartyMember;
+ import org.l2jmobius.gameserver.network.GameClient;
+ import org.l2jmobius.gameserver.network.ServerPackets;
+ 
+@@ -44,56 +50,111 @@ public class PartySmallWindowAll extends ServerPacket
+ 	@Override
+ 	public void writeImpl(GameClient client, WritableBuffer buffer)
+ 	{
++		final Set<Integer> realMemberIds = new HashSet<>();
++		for (Player member : _party.getMembers())
++		{
++			if ((member != null) && (member != _exclude))
++			{
++				realMemberIds.add(member.getObjectId());
++			}
++		}
++		final List<HybridPartyMember> overlayMembers = getHybridPartyMembers(realMemberIds);
+ 		ServerPackets.PARTY_SMALL_WINDOW_ALL.writeId(this, buffer);
+ 		buffer.writeInt(_party.getLeaderObjectId());
+ 		buffer.writeByte(_party.getDistributionType().getId());
+-		buffer.writeByte(_party.getMemberCount() - 1);
++		buffer.writeByte((_party.getMemberCount() - 1) + overlayMembers.size());
++		final Set<Integer> writtenIds = new HashSet<>(realMemberIds);
+ 		for (Player member : _party.getMembers())
+ 		{
+ 			if ((member != null) && (member != _exclude))
+ 			{
+-				buffer.writeInt(member.getObjectId());
+-				buffer.writeString(member.getAppearance().getVisibleName());
+-				buffer.writeInt((int) member.getCurrentCp()); // c4
+-				buffer.writeInt(member.getMaxCp()); // c4
+-				buffer.writeInt((int) member.getCurrentHp());
+-				buffer.writeInt((int) member.getMaxHp());
+-				buffer.writeInt((int) member.getCurrentMp());
+-				buffer.writeInt(member.getMaxMp());
+-				buffer.writeInt(member.getVitalityPoints());
+-				buffer.writeByte(member.getLevel());
+-				buffer.writeShort(member.getPlayerClass().getId());
+-				buffer.writeByte(1); // Unk
+-				buffer.writeShort(member.getRace().ordinal());
+-				buffer.writeInt(0); // 228
+-				final Summon pet = member.getPet();
+-				buffer.writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
+-				if (pet != null)
+-				{
+-					buffer.writeInt(pet.getObjectId());
+-					buffer.writeInt(pet.getId() + 1000000);
+-					buffer.writeByte(pet.getSummonType());
+-					buffer.writeString(pet.getName());
+-					buffer.writeInt((int) pet.getCurrentHp());
+-					buffer.writeInt((int) pet.getMaxHp());
+-					buffer.writeInt((int) pet.getCurrentMp());
+-					buffer.writeInt(pet.getMaxMp());
+-					buffer.writeByte(pet.getLevel());
+-				}
+-				
+-				member.getServitors().values().forEach(s ->
+-				{
+-					buffer.writeInt(s.getObjectId());
+-					buffer.writeInt(s.getId() + 1000000);
+-					buffer.writeByte(s.getSummonType());
+-					buffer.writeString(s.getName());
+-					buffer.writeInt((int) s.getCurrentHp());
+-					buffer.writeInt((int) s.getMaxHp());
+-					buffer.writeInt((int) s.getCurrentMp());
+-					buffer.writeInt(s.getMaxMp());
+-					buffer.writeByte(s.getLevel());
+-				});
++				writePlayerMember(buffer, member);
++			}
++		}
++		for (HybridPartyMember member : overlayMembers)
++		{
++			if ((member != null) && writtenIds.add(member.getObjectId()))
++			{
++				writeHybridMember(buffer, member);
++			}
++		}
++	}
++
++	private List<HybridPartyMember> getHybridPartyMembers(Set<Integer> writtenIds)
++	{
++		final List<HybridPartyMember> members = new ArrayList<>();
++		final Set<Integer> seenIds = new HashSet<>((writtenIds == null) ? Set.of() : writtenIds);
++		for (HybridPartyMember member : _party.getHybridPartyMembers())
++		{
++			if ((member != null) && (member.getObjectId() != _exclude.getObjectId()) && seenIds.add(member.getObjectId()))
++			{
++				members.add(member);
+ 			}
+ 		}
++		return members;
++	}
++
++	private void writePlayerMember(WritableBuffer buffer, Player member)
++	{
++		buffer.writeInt(member.getObjectId());
++		buffer.writeString(member.getAppearance().getVisibleName());
++		buffer.writeInt((int) member.getCurrentCp()); // c4
++		buffer.writeInt(member.getMaxCp()); // c4
++		buffer.writeInt((int) member.getCurrentHp());
++		buffer.writeInt((int) member.getMaxHp());
++		buffer.writeInt((int) member.getCurrentMp());
++		buffer.writeInt(member.getMaxMp());
++		buffer.writeInt(member.getVitalityPoints());
++		buffer.writeByte(member.getLevel());
++		buffer.writeShort(member.getPlayerClass().getId());
++		buffer.writeByte(1); // Unk
++		buffer.writeShort(member.getRace().ordinal());
++		buffer.writeInt(0); // 228
++		final Summon pet = member.getPet();
++		buffer.writeInt(member.getServitors().size() + (pet != null ? 1 : 0)); // Summon size, one only atm
++		if (pet != null)
++		{
++			buffer.writeInt(pet.getObjectId());
++			buffer.writeInt(pet.getId() + 1000000);
++			buffer.writeByte(pet.getSummonType());
++			buffer.writeString(pet.getName());
++			buffer.writeInt((int) pet.getCurrentHp());
++			buffer.writeInt((int) pet.getMaxHp());
++			buffer.writeInt((int) pet.getCurrentMp());
++			buffer.writeInt(pet.getMaxMp());
++			buffer.writeByte(pet.getLevel());
++		}
++
++		member.getServitors().values().forEach(s ->
++		{
++			buffer.writeInt(s.getObjectId());
++			buffer.writeInt(s.getId() + 1000000);
++			buffer.writeByte(s.getSummonType());
++			buffer.writeString(s.getName());
++			buffer.writeInt((int) s.getCurrentHp());
++			buffer.writeInt((int) s.getMaxHp());
++			buffer.writeInt((int) s.getCurrentMp());
++			buffer.writeInt(s.getMaxMp());
++			buffer.writeByte(s.getLevel());
++		});
++	}
++
++	private void writeHybridMember(WritableBuffer buffer, HybridPartyMember member)
++	{
++		buffer.writeInt(member.getObjectId());
++		buffer.writeString(member.getName());
++		buffer.writeInt(member.getCurrentCp());
++		buffer.writeInt(member.getMaxCp());
++		buffer.writeInt(member.getCurrentHp());
++		buffer.writeInt(member.getMaxHp());
++		buffer.writeInt(member.getCurrentMp());
++		buffer.writeInt(member.getMaxMp());
++		buffer.writeInt(member.getVitalityPoints());
++		buffer.writeByte(member.getLevel());
++		buffer.writeShort(member.getPlayerClassId());
++		buffer.writeByte(1);
++		buffer.writeShort(member.getRaceOrdinal());
++		buffer.writeInt(0);
++		buffer.writeInt(0);
+ 	}
+ }
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowUpdate.java b/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowUpdate.java
+index 0b6130a..d0e70cf 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowUpdate.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PartySmallWindowUpdate.java
+@@ -22,6 +22,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
+ 
+ import org.l2jmobius.commons.network.WritableBuffer;
+ import org.l2jmobius.gameserver.model.actor.Player;
++import org.l2jmobius.gameserver.model.groups.Party.HybridPartyMember;
+ import org.l2jmobius.gameserver.network.GameClient;
+ import org.l2jmobius.gameserver.network.ServerPackets;
+ import org.l2jmobius.gameserver.network.enums.PartySmallWindowUpdateType;
+@@ -31,12 +32,40 @@ import org.l2jmobius.gameserver.network.enums.PartySmallWindowUpdateType;
+  */
+ public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowUpdateType>
+ {
+-	private final Player _member;
++	private final int _objectId;
++	private final int _currentCp;
++	private final int _maxCp;
++	private final int _currentHp;
++	private final int _maxHp;
++	private final int _currentMp;
++	private final int _maxMp;
++	private final int _level;
++	private final int _classId;
++	private final int _vitalityPoints;
+ 	private int _flags = 0;
+ 	
+ 	public PartySmallWindowUpdate(Player member, boolean addAllFlags)
+ 	{
+-		_member = member;
++		this(member.getObjectId(), (int) member.getCurrentCp(), member.getMaxCp(), (int) member.getCurrentHp(), (int) member.getMaxHp(), (int) member.getCurrentMp(), member.getMaxMp(), member.getLevel(), member.getPlayerClass().getId(), member.getVitalityPoints(), addAllFlags);
++	}
++
++	public PartySmallWindowUpdate(HybridPartyMember member, boolean addAllFlags)
++	{
++		this(member.getObjectId(), member.getCurrentCp(), member.getMaxCp(), member.getCurrentHp(), member.getMaxHp(), member.getCurrentMp(), member.getMaxMp(), member.getLevel(), member.getPlayerClassId(), member.getVitalityPoints(), addAllFlags);
++	}
++
++	private PartySmallWindowUpdate(int objectId, int currentCp, int maxCp, int currentHp, int maxHp, int currentMp, int maxMp, int level, int classId, int vitalityPoints, boolean addAllFlags)
++	{
++		_objectId = objectId;
++		_currentCp = currentCp;
++		_maxCp = maxCp;
++		_currentHp = currentHp;
++		_maxHp = maxHp;
++		_currentMp = currentMp;
++		_maxMp = maxMp;
++		_level = level;
++		_classId = classId;
++		_vitalityPoints = vitalityPoints;
+ 		if (addAllFlags)
+ 		{
+ 			for (PartySmallWindowUpdateType type : PartySmallWindowUpdateType.values())
+@@ -50,46 +79,46 @@ public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowU
+ 	public void writeImpl(GameClient client, WritableBuffer buffer)
+ 	{
+ 		ServerPackets.PARTY_SMALL_WINDOW_UPDATE.writeId(this, buffer);
+-		buffer.writeInt(_member.getObjectId());
++		buffer.writeInt(_objectId);
+ 		buffer.writeShort(_flags);
+ 		if (containsMask(PartySmallWindowUpdateType.CURRENT_CP))
+ 		{
+-			buffer.writeInt((int) _member.getCurrentCp()); // c4
++			buffer.writeInt(_currentCp); // c4
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.MAX_CP))
+ 		{
+-			buffer.writeInt(_member.getMaxCp()); // c4
++			buffer.writeInt(_maxCp); // c4
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.CURRENT_HP))
+ 		{
+-			buffer.writeInt((int) _member.getCurrentHp());
++			buffer.writeInt(_currentHp);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.MAX_HP))
+ 		{
+-			buffer.writeInt((int) _member.getMaxHp());
++			buffer.writeInt(_maxHp);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.CURRENT_MP))
+ 		{
+-			buffer.writeInt((int) _member.getCurrentMp());
++			buffer.writeInt(_currentMp);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.MAX_MP))
+ 		{
+-			buffer.writeInt(_member.getMaxMp());
++			buffer.writeInt(_maxMp);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.LEVEL))
+ 		{
+-			buffer.writeByte(_member.getLevel());
++			buffer.writeByte(_level);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.CLASS_ID))
+ 		{
+-			buffer.writeShort(_member.getPlayerClass().getId());
++			buffer.writeShort(_classId);
+ 		}
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.PARTY_SUBSTITUTE))
+@@ -99,7 +128,7 @@ public class PartySmallWindowUpdate extends AbstractMaskPacket<PartySmallWindowU
+ 		
+ 		if (containsMask(PartySmallWindowUpdateType.VITALITY_POINTS))
+ 		{
+-			buffer.writeInt(_member.getVitalityPoints());
++			buffer.writeInt(_vitalityPoints);
+ 		}
+ 	}
+ 	
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeReceiveMemberInfo.java b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeReceiveMemberInfo.java
+index da3b139..7fd01cc 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeReceiveMemberInfo.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeReceiveMemberInfo.java
+@@ -21,6 +21,7 @@
+ package org.l2jmobius.gameserver.network.serverpackets;
+ 
+ import org.l2jmobius.commons.network.WritableBuffer;
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService.HybridClanMemberSnapshot;
+ import org.l2jmobius.gameserver.model.clan.ClanMember;
+ import org.l2jmobius.gameserver.network.GameClient;
+ import org.l2jmobius.gameserver.network.ServerPackets;
+@@ -30,32 +31,42 @@ import org.l2jmobius.gameserver.network.ServerPackets;
+  */
+ public class PledgeReceiveMemberInfo extends ServerPacket
+ {
+-	private final ClanMember _member;
++	private final int _pledgeType;
++	private final String _name;
++	private final String _title;
++	private final int _powerGrade;
++	private final String _pledgeName;
++	private final String _apprenticeOrSponsorName;
+ 	
+ 	public PledgeReceiveMemberInfo(ClanMember member)
+ 	{
+-		_member = member;
++		_pledgeType = member.getPledgeType();
++		_name = member.getName();
++		_title = member.getTitle();
++		_powerGrade = member.getPowerGrade();
++		_pledgeName = (_pledgeType != 0) ? member.getClan().getSubPledge(_pledgeType).getName() : member.getClan().getName();
++		_apprenticeOrSponsorName = member.getApprenticeOrSponsorName();
++	}
++
++	public PledgeReceiveMemberInfo(HybridClanMemberSnapshot member)
++	{
++		_pledgeType = member.getPledgeType();
++		_name = member.getName();
++		_title = member.getTitle();
++		_powerGrade = member.getPowerGrade();
++		_pledgeName = member.getPledgeName();
++		_apprenticeOrSponsorName = member.getApprenticeOrSponsorName();
+ 	}
+ 	
+ 	@Override
+ 	public void writeImpl(GameClient client, WritableBuffer buffer)
+ 	{
+ 		ServerPackets.EX_VIEW_PLEDGE_MEMBER_INFO.writeId(this, buffer);
+-		buffer.writeInt(_member.getPledgeType());
+-		buffer.writeString(_member.getName());
+-		buffer.writeString(_member.getTitle()); // title
+-		buffer.writeInt(_member.getPowerGrade()); // power
+-		
+-		// clan or subpledge name
+-		if (_member.getPledgeType() != 0)
+-		{
+-			buffer.writeString((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
+-		}
+-		else
+-		{
+-			buffer.writeString(_member.getClan().getName());
+-		}
+-		
+-		buffer.writeString(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
++		buffer.writeInt(_pledgeType);
++		buffer.writeString(_name);
++		buffer.writeString(_title);
++		buffer.writeInt(_powerGrade);
++		buffer.writeString(_pledgeName);
++		buffer.writeString(_apprenticeOrSponsorName);
+ 	}
+ }
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAdd.java b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAdd.java
+index f3629f9..d183471 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAdd.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAdd.java
+@@ -21,6 +21,7 @@
+ package org.l2jmobius.gameserver.network.serverpackets;
+ 
+ import org.l2jmobius.commons.network.WritableBuffer;
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService.HybridClanMemberSnapshot;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.clan.ClanMember;
+ import org.l2jmobius.gameserver.network.GameClient;
+@@ -51,6 +52,15 @@ public class PledgeShowMemberListAdd extends ServerPacket
+ 		_isOnline = (cm.isOnline() ? cm.getObjectId() : 0);
+ 		_pledgeType = cm.getPledgeType();
+ 	}
++
++	public PledgeShowMemberListAdd(HybridClanMemberSnapshot member)
++	{
++		_name = member.getName();
++		_level = member.getLevel();
++		_classId = member.getClassId();
++		_isOnline = (member.getOnlineStatus() > 0) ? member.getObjectId() : 0;
++		_pledgeType = member.getPledgeType();
++	}
+ 	
+ 	@Override
+ 	public void writeImpl(GameClient client, WritableBuffer buffer)
+diff --git a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAll.java b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAll.java
+index 4e68f9c..8d0e241 100644
+--- a/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAll.java
++++ b/java/org/l2jmobius/gameserver/network/serverpackets/PledgeShowMemberListAll.java
+@@ -21,10 +21,13 @@
+ package org.l2jmobius.gameserver.network.serverpackets;
+ 
+ import java.util.Collection;
++import java.util.List;
+ 
+ import org.l2jmobius.commons.network.WritableBuffer;
+ import org.l2jmobius.gameserver.config.ServerConfig;
+ import org.l2jmobius.gameserver.data.sql.CharInfoTable;
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService;
++import org.l2jmobius.gameserver.fakeplayer.service.FakePlayerHybridClanService.HybridClanMemberSnapshot;
+ import org.l2jmobius.gameserver.model.actor.Player;
+ import org.l2jmobius.gameserver.model.clan.Clan;
+ import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
+@@ -42,6 +45,7 @@ public class PledgeShowMemberListAll extends ServerPacket
+ 	private final String _name;
+ 	private final String _leaderName;
+ 	private final Collection<ClanMember> _members;
++	private final List<HybridClanMemberSnapshot> _hybridMembers;
+ 	private final int _pledgeId;
+ 	private final boolean _isSubPledge;
+ 	
+@@ -53,6 +57,8 @@ public class PledgeShowMemberListAll extends ServerPacket
+ 		_leaderName = pledge == null ? clan.getLeaderName() : CharInfoTable.getInstance().getNameById(pledge.getLeaderId());
+ 		_name = pledge == null ? clan.getName() : pledge.getName();
+ 		_members = _clan.getMembers();
++		final FakePlayerHybridClanService hybridClanService = FakePlayerHybridClanService.getInstance();
++		_hybridMembers = (hybridClanService == null) ? List.of() : hybridClanService.getHybridClanMembers(clan, _pledgeId);
+ 		_isSubPledge = isSubPledge;
+ 	}
+ 	
+@@ -95,7 +101,7 @@ public class PledgeShowMemberListAll extends ServerPacket
+ 		buffer.writeInt(_clan.getAllyCrestId());
+ 		buffer.writeInt(_clan.isAtWar()); // new c3
+ 		buffer.writeInt(0); // Territory castle ID
+-		buffer.writeInt(_clan.getSubPledgeMembersCount(_pledgeId));
++		buffer.writeInt(_clan.getSubPledgeMembersCount(_pledgeId) + _hybridMembers.size());
+ 		for (ClanMember m : _members)
+ 		{
+ 			if (m.getPledgeType() != _pledgeId)
+@@ -122,5 +128,16 @@ public class PledgeShowMemberListAll extends ServerPacket
+ 			buffer.writeInt(m.getSponsor() != 0);
+ 			buffer.writeByte(m.getOnlineStatus());
+ 		}
++		for (HybridClanMemberSnapshot member : _hybridMembers)
++		{
++			buffer.writeString(member.getName());
++			buffer.writeInt(member.getLevel());
++			buffer.writeInt(member.getClassId());
++			buffer.writeInt(member.isFemale() ? 1 : 0);
++			buffer.writeInt(member.getRaceOrdinal());
++			buffer.writeInt(member.getOnlineStatus() > 0 ? member.getObjectId() : 0);
++			buffer.writeInt(member.hasSponsor() ? 1 : 0);
++			buffer.writeByte(member.getOnlineStatus());
++		}
+ 	}
+ }

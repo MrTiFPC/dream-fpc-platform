@@ -22,6 +22,7 @@ integration/mobius/config/*.ini -> <warg-source>/dist/game/config/Custom/
 integration/mobius/sql/*.sql    -> your game database or DB installer flow
 content/warg/fake_players/*.json -> <warg-source>/dist/game/data/fake_players/
 content/warg/npcs/fpc_*.xml     -> <warg-source>/dist/game/data/stats/npcs/custom/
+content/warg/skills/custom/*.xml -> <warg-source>/dist/game/data/stats/skills/custom/
 ```
 
 Keep `integration/mobius` separate when reviewing host-specific changes. Platform source and Mobius integration hooks are intentionally separate.
@@ -30,7 +31,13 @@ Keep `integration/mobius` separate when reviewing host-specific changes. Platfor
 
 The platform Java source needs the matching Mobius host hooks to load config, bootstrap the FPC module, load FPC carrier NPC data, and route the selected chat/admin surfaces.
 
-If your Warg tree does not already have those hooks, apply the public Mobius Warg patch kit when it is available, or port the hooks manually from the integration notes. Without those hooks, copied platform files can compile but the runtime may not start or expose FPC behavior.
+Apply the public Warg host patch after copying the platform files:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File <dream-fpc-platform>\integration\mobius\apply-warg-host-hooks.ps1 -WargSource <warg-source>
+```
+
+Without those hooks, copied platform files will not compile on a clean Warg tree.
 
 Start with:
 
@@ -42,14 +49,15 @@ docs/integration/mobius-warg.md
 
 1. Start from a clean Warg source workspace.
 2. Copy `platform/java` into the matching `java` package tree.
-3. Copy `integration/mobius/config/FakePlayerPlatform.ini` into `dist/game/config/Custom`.
+3. Copy `integration/mobius/config/*.ini` into `dist/game/config/Custom`.
 4. Copy `content/warg/fake_players` into `dist/game/data/fake_players`.
 5. Copy `content/warg/npcs/fpc_*.xml` into `dist/game/data/stats/npcs/custom`.
-6. Apply the SQL files under `integration/mobius/sql` if you enable those features.
-7. Apply or port the Mobius host hooks described in the integration notes.
-8. Build the Warg server from source with your normal Mobius build target.
-9. Start the server only after the build/deploy step is fully complete.
-10. Validate logs first, then test in game.
+6. Copy `content/warg/skills/custom/*.xml` into `dist/game/data/stats/skills/custom`.
+7. Apply the Warg host patch with `integration/mobius/apply-warg-host-hooks.ps1`.
+8. Apply the SQL files under `integration/mobius/sql` if you enable those features.
+9. Build the Warg server from source with your normal Mobius build target.
+10. Start the server only after the build/deploy step is fully complete.
+11. Validate logs first, then test in game.
 
 ## Optional Sidecar And Studio
 
@@ -99,7 +107,8 @@ control-plane/sidecar/FIRST_FPC_IN_WARG_TUTORIAL.md
 
 ## Troubleshooting
 
-- If Java compiles but no FPC behavior appears, check the Mobius host hooks and `FakePlayerPlatform.ini`.
+- If Java compile fails with missing hybrid party/clan symbols, the Warg host patch was not applied.
+- If Java compiles but no FPC behavior appears, check the Mobius host hooks, `FakePlayerPlatform.ini`, and `FakePlayers.ini`.
 - If FPC carrier NPCs do not load, check the copied `fpc_*.xml` files and any host-side fake-player NPC load gate.
 - If Studio opens but has no useful data, confirm the sidecar can see the expected Warg data paths and runtime snapshots.
 - If startup errors appear immediately after deployment, do one clean post-deploy restart before assuming source logic is broken.
